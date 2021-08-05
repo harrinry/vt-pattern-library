@@ -1,0 +1,24 @@
+{
+  "name": "vt-pattern-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@frctl/fractal": "^1.5.11",
+    "@frctl/mandelbrot": "^1.9.4",
+    "@frctl/nunjucks": "^2.0.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha",
+    "fractal:start": "fractal start --sync",
+    "fractal:build": "fractal build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquent/vt-pattern-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://aquent.github.io/vt-pattern-library"
+}
