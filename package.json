@@ -8,7 +8,10 @@
     "@frctl/mandelbrot": "^1.9.4",
     "@frctl/nunjucks": "^2.0.13"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "rollup-plugin-scss": "^3.0.0",
+    "sass": "^1.37.5"
+  },
   "scripts": {
     "test": "mocha",
     "fractal:start": "fractal start --sync",

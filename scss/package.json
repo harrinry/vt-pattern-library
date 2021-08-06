@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://artifactory.aquent.io/artifactory/api/npm/aquent-npm/"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +21,10 @@
   "author": "Web Squad",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "gulp": "^4.0.2",
+    "node-sass": "^6.0.1",
+    "rollup": "^2.56.0",
+    "rollup-plugin-visualizer": "^5.5.2"
   }
 }
