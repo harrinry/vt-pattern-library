@@ -7,7 +7,9 @@
     "registry": "https://artifactory.aquent.io/artifactory/api/npm/aquent-npm/"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -22,9 +24,13 @@
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.4",
+    "autoprefixer": "^10.3.1",
+    "cssnano": "^5.0.7",
     "gulp": "^4.0.2",
     "node-sass": "^6.0.1",
+    "postcss": "^8.3.6",
     "rollup": "^2.56.0",
     "rollup-plugin-visualizer": "^5.5.2"
-  }
+  },
+  "browserslist": "last 4 versions"
 }
