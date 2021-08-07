@@ -1,9 +1,16 @@
-@import 'partials/fonts';
+@charset 'UTF-8';
+/**
+ * Master SCSS File (vitamintalent.com)
+ * Version 1.0.0
+ */
 
-body {
-  font-size: 1.6rem;
-}
+ // SCSS stuff we need to render and process everything
+@import 'util/variables';
+@import 'util/fonts';
 
-html {
-  font-size: 10px;
-}
+// Zero everything out, just in case
+@import 'modern-css-reset';
+
+// Start loading theme files, starting with 'base'
+@import 'partials/base';
+@import 'partials/forms';

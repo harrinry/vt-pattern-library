@@ -7,6 +7,7 @@ export default {
   input: 'entry.js',
   plugins: [
     scss({
+      includePaths: ['node_modules/'],
       output: '../public/css/dist/styles.css',
       processor: () => postcss([
         autoprefixer(),
