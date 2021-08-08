@@ -1,7 +1,9 @@
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
-import postcss from 'postcss';
+import postcss from 'rollup-plugin-postcss';
 import scss from 'rollup-plugin-scss';
+
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 
 export default {
   input: 'entry.js',
@@ -9,10 +11,8 @@ export default {
     scss({
       includePaths: ['node_modules/'],
       output: '../public/css/dist/styles.css',
-      processor: () => postcss([
-        autoprefixer(),
-        cssnano()
-      ]),
+      processor: () => postcss(),
+      sourceMap: (process.env.NODE_ENV == 'development' ? true : false)
     })
   ]
 }
