@@ -9,10 +9,9 @@
     "registry": "https://artifactory.aquent.io/artifactory/api/npm/aquent-npm/"
   },
   "scripts": {
-    "build": "rollup -c --environment TARGET:production",
+    "build": "rollup -c --environment TARGET:production && cp dist/styles.css ../public/css/dist",
     "build:dev": "rollup -c --environment TARGET:development",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "rollup -c --environment TARGET:development"
+    "watch": "rollup -c --environment TARGET:development --watch --dir tmp"
   },
   "repository": {
     "type": "git",
@@ -24,16 +23,14 @@
     "styling"
   ],
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.0.4",
     "autoprefixer": "^10.3.1",
     "cssnano": "^5.0.7",
-    "gulp": "^4.0.2",
     "modern-css-reset": "^1.4.0",
     "node-sass": "^6.0.1",
+    "postcss-import": "^14.0.2",
     "rollup": "^2.56.0",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-visualizer": "^5.5.2"
-  },
-  "browserslist": "last 4 versions"
+  }
 }
