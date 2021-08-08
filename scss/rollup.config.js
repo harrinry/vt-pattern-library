@@ -3,7 +3,23 @@ import cssnano from 'cssnano';
 import postcss from 'rollup-plugin-postcss';
 import scss from 'rollup-plugin-scss';
 
-console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+let postcssConfig = {
+	plugins: [
+    autoprefixer({
+      overrideBrowserslist: 'last 4 versions',
+      sourceMap: (process.env.TARGET === 'development' ? true : false)
+    })
+  ],
+};
+
+// If we are in production mode, then add cssnano
+if (process.env.TARGET === 'production') {
+	postcssConfig.plugins.push(
+		cssnano({
+			preset: 'default',
+		})
+	);
+} 
 
 export default {
   input: 'entry.js',
@@ -11,8 +27,7 @@ export default {
     scss({
       includePaths: ['node_modules/'],
       output: '../public/css/dist/styles.css',
-      processor: () => postcss(),
-      sourceMap: (process.env.NODE_ENV == 'development' ? true : false)
+      processor: () => postcss()
     })
   ]
 }
