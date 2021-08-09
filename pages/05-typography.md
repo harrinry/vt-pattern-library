@@ -1,4 +1,4 @@
 ---
 title: Typography Overview
 ---
-![Typography breakdown](/img/typography.svg)
+![Typography breakdown]({{ '/img/typography.svg' | path }})
