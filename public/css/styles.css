@@ -3,3 +3,16 @@
 body {
   font-size: 10px;
 }
+
+html {
+  font-size: 1.6rem;
+}
+
+.Prose {
+  font-size: 1.6rem !important;
+  max-width: initial !important;
+}
+
+.Tree-collectionLabel, .Tree-item, .Tree-title {
+  font-size: 1.2rem !important;
+}
