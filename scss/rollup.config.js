@@ -19,11 +19,11 @@ let minfile = '';
 if (target === 'production') {
   minfile = 'min.';
 
-	postcssConfig.push(
-		cssnano({
-			preset: 'default',
-		})
-	);
+  postcssConfig.push(
+    cssnano({
+      preset: 'default',
+    })
+  );
 } 
 
 export default {
