@@ -23,106 +23,59 @@
  * © 2009-2021 Adobe Systems Incorporated. All Rights Reserved.
  */
 /*{"last_published":"2021-08-06 17:39:10 UTC"}*/
+*,*::before,*::after{-webkit-box-sizing:border-box;box-sizing:border-box}
+body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}
+ul[role="list"],ol[role="list"]{list-style:none}
+html:focus-within{scroll-behavior:smooth}
+body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}
+a:not([class]){-webkit-text-decoration-skip:ink;text-decoration-skip-ink:auto}
+img,picture{max-width:100%;display:block}
+input,button,textarea,select{font:inherit}
+@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{-webkit-animation-duration:.01ms !important;animation-duration:.01ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important;-webkit-transition-duration:.01ms !important;-o-transition-duration:.01ms !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
 @font-face {
   font-family: "aktiv-grotesk";
   src: url("https://use.typekit.net/af/a798a9/000000000000000077359d55/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/a798a9/000000000000000077359d55/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/a798a9/000000000000000077359d55/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
   font-display: swap;
   font-style: normal;
-  font-weight: 700;
-}
+  font-weight: 700; }
 @font-face {
   font-family: "degular";
   src: url("https://use.typekit.net/af/2fce28/00000000000000007735c872/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"), url("https://use.typekit.net/af/2fce28/00000000000000007735c872/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"), url("https://use.typekit.net/af/2fce28/00000000000000007735c872/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
   font-display: swap;
   font-style: normal;
-  font-weight: 600;
-}
+  font-weight: 600; }
 @font-face {
   font-family: "degular";
   src: url("https://use.typekit.net/af/1db274/00000000000000007735c875/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff2"), url("https://use.typekit.net/af/1db274/00000000000000007735c875/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff"), url("https://use.typekit.net/af/1db274/00000000000000007735c875/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("opentype");
   font-display: swap;
   font-style: italic;
-  font-weight: 600;
-}
+  font-weight: 600; }
 @font-face {
   font-family: "degular-text";
   src: url("https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
   font-display: swap;
   font-style: normal;
-  font-weight: 500;
-}
+  font-weight: 500; }
 @font-face {
   font-family: "degular-text";
   src: url("https://use.typekit.net/af/5dc397/00000000000000007735c86e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"), url("https://use.typekit.net/af/5dc397/00000000000000007735c86e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"), url("https://use.typekit.net/af/5dc397/00000000000000007735c86e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");
   font-display: swap;
   font-style: italic;
-  font-weight: 500;
-}
+  font-weight: 500; }
 @font-face {
   font-family: "degular-text";
   src: url("https://use.typekit.net/af/723f02/00000000000000007735c871/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"), url("https://use.typekit.net/af/723f02/00000000000000007735c871/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"), url("https://use.typekit.net/af/723f02/00000000000000007735c871/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
   font-display: swap;
   font-style: normal;
-  font-weight: 600;
-}
+  font-weight: 600; }
 .tk-aktiv-grotesk {
-  font-family: "aktiv-grotesk", sans-serif;
-}
+  font-family: "aktiv-grotesk",sans-serif; }
 .tk-degular {
-  font-family: "degular", sans-serif;
-}
+  font-family: "degular",sans-serif; }
 .tk-degular-text {
-  font-family: "degular-text", sans-serif;
-}
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
-  margin: 0;
-}
-ul[role=list], ol[role=list] {
-  list-style: none;
-}
-html:focus-within {
-  scroll-behavior: smooth;
-}
+  font-family: "degular-text",sans-serif; }
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
-}
-img, picture {
-  max-width: 100%;
-  display: block;
-}
-input, button, textarea, select {
-  font: inherit;
-}
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *, *::before, *::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-         -o-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-body {
-  font-size: 1.6rem;
-}
+  font-size: 1.6rem; }
 html {
-  font-size: 10px;
-}
+  font-size: 10px; }
 /*# sourceMappingURL=styles.css.map */

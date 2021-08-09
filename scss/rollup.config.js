@@ -13,8 +13,12 @@ const postcssConfig = [
   })
 ];
 
+let minfile = '';
+
 // If we are in production mode, then add cssnano to minify CSS
 if (target === 'production') {
+  minfile = 'min.';
+
 	postcssConfig.push(
 		cssnano({
 			preset: 'default',
@@ -30,7 +34,7 @@ export default {
       includePaths: [
           'node_modules/'
         ],
-      output: 'dist/styles.css',
+      output: `dist/styles.${minfile}css`,
       processor: () => postcss(postcssConfig),
       sourceMap: (target === 'development' ? true : false)
     })
