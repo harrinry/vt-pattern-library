@@ -3,24 +3,24 @@ title: Grid and Spacing
 ---
 ## Grid
 
-![Grid layout](/img/grid.svg)
+![Grid layout]({{ '/img/grid.svg' | path }})
 
 ## Horizontal Spacing
 
 Horizontal Spacing is also set by an increments of 5 to correlate with original grid foundation. WIP. For reference only. Design to use when designing comps. Dev to implement based on comps.
 
-![Horizontal spacing](/img/spacing-horizontal.svg)
+![Horizontal spacing]({{ '/img/spacing-horizontal.svg' | path }})
 
 ## Vertical Spacing
 
 ### Large Breakpoint
 
-![Vertical spacing, large breakpoint](/img/spacing-vertical-large.svg)
+![Vertical spacing, large breakpoint]({{ '/img/spacing-vertical-large.svg' | path }})
 
 ### Medium Breakpoint
 
-![Vertical spacing, medium breakpoint](/img/spacing-vertical-medium.svg)
+![Vertical spacing, medium breakpoint]({{ '/img/spacing-vertical-medium.svg' | path }})
 
 ### Small Breakpoint
 
-![Vertical spacing, small breakpoint](/img/spacing-vertical-small.svg)
+![Vertical spacing, small breakpoint]({{ '/img/spacing-vertical-small.svg' | path }})
