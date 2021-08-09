@@ -119,10 +119,72 @@ input, button, textarea, select {
     scroll-behavior: auto !important;
   }
 }
+/** TABLE OF CONTENTS
+ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
+1 — Document Base
+2 — Headers
+/// END TABLE OF CONTENTS **/
+/** 1 - Document Base
+------------------------------------------------------------*/
 body {
+  color: #051c2c;
   font-size: 1.6rem;
 }
 html {
   font-size: 10px;
+}
+/** 2 - Headers
+------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: degular, sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-size: 8.4rem;
+  line-height: 1.048;
+}
+h2 {
+  font-size: 6.8rem;
+  line-height: 1.059;
+}
+/** TABLE OF CONTENTS
+ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
+1 — Inputs
+1.1 — Single line
+1.2 — Multi line
+2 — Selects
+2.1 — Single
+2.2 — Multi
+/// END TABLE OF CONTENTS **/
+/** 1 - Inputs
+------------------------------------------------------------*/
+/* =========================
+1.1 - Single line
+========================= */
+/* =========================
+1.2 - Multi line
+========================= */
+/** 2 - Selects
+------------------------------------------------------------*/
+/* =========================
+2.1 - Single
+========================= */
+/* =========================
+2.2 - Multi
+========================= */
+/** TABLE OF CONTENTS
+ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
+1 — Alternates
+/// END TABLE OF CONTENTS **/
+/** 1 - Alternates
+------------------------------------------------------------*/
+/** TABLE OF CONTENTS
+ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
+1 — Text
+/// END TABLE OF CONTENTS **/
+/** 1 - Text
+------------------------------------------------------------*/
+.uppercase {
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=styles.css.map */

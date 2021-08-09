@@ -1,9 +1,27 @@
 ---
 title: Grid and Spacing
 ---
-## Grid
+## Shared Responsive Grid System
 
-![Grid layout]({{ '/img/grid.svg' | path }})
+The Aquent & Vitamin T Grid System base is set by an increment of 5. The gutter is set first, and the margin is 2x the gutter width. For example, when the gutter is set to 15px, the margin is 30px. 
+
+### Desktop
+
+On desktop, there are two grid choices.
+
+![Grid layout]({{ '/img/grid-desktop-flex.svg' | path }})
+
+### Tablet and Mobile
+
+Tablet &amp; Mobile leverage the ‘Flex Grid’ because the screen sizes will be more controlled.
+
+![Grid layout]({{ '/img/grid-tablet-mobile-flex.svg' | path }})
+
+### Mobile
+
+The ‘Flex Grid’ gutters and margins become smaller to allow for an optimal use of screen space, but still employs the same principles.
+
+![Grid layout]({{ '/img/grid-mobile-flex.svg' | path }})
 
 ## Horizontal Spacing
 
@@ -12,6 +30,8 @@ Horizontal Spacing is also set by an increments of 5 to correlate with original 
 ![Horizontal spacing]({{ '/img/spacing-horizontal.svg' | path }})
 
 ## Vertical Spacing
+
+*To-do: Import detailed vertical spacing breakdown from Figma*
 
 ### Large Breakpoint
 
