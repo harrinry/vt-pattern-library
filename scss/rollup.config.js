@@ -1,6 +1,6 @@
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
-import postcss from 'postcss';
+import postcss from 'rollup-plugin-postcss';
 import postcssImport from 'postcss-import';
 import scss from 'rollup-plugin-scss';
 

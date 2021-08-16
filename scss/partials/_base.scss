@@ -17,7 +17,7 @@ html {
 
 /** 2 - Headers
 ------------------------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: degular, sans-serif;
   font-weight: 600;
 }
@@ -31,3 +31,101 @@ h2 {
   font-size: 6.8rem;
   line-height: 1.059;
 }
+
+h3 {
+  font-size: 5.4rem;
+  line-height: 1.059;
+
+  &.alt {
+    text-transform: uppercase;
+  }
+}
+
+h4 {
+  font-size: 4.2rem;
+  line-height: 1.059;
+  
+  &.alt {
+    text-transform: uppercase;
+  }
+
+  &.quote {
+    font-style: italic;
+  }
+}
+
+h5 {
+  font-size: 3.2rem;
+  line-height: 1.059;
+
+  &.alt {
+    text-transform: uppercase;
+  }
+
+  &.quote {
+    font-style: italic;
+  }
+}
+
+h6 {
+  font-size: 2.8rem;
+  line-height: 1.059;
+
+  &.alt {
+    text-transform: uppercase;
+  }
+
+  &.quote {
+    font-style: italic;
+  }
+}
+
+.tertiary__info {
+  font-family: "aktiv-grotesk", sans-serif;
+  font-weight: 700;
+
+  &--1 {
+    font-size: 2rem;
+    line-height: 1.059;
+    letter-spacing: 0.3rem;
+  }
+
+  &--2 {
+    font-size: 1.8rem;
+    line-height: 1.059;
+    letter-spacing: 0.3rem;
+  }
+
+  &--3 {
+    font-size: 1.6rem;
+    line-height: 1.059;
+    letter-spacing: 0.3rem;
+  }
+}
+
+p {
+  font-weight: 500;
+}
+
+// a {
+
+// }
+
+// strong {}    
+// em {}
+// blockquote {}
+// time {} 
+// ul {}
+// ol {}
+// li {}
+// dd {}
+// dl {}
+// hr {}
+// pre {}
+// table {} 
+// thead {}
+// tbody {} 
+// tfoot {} 
+
+// th, tr, td, 
+//  sub, div, span
