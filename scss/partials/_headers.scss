@@ -5,3 +5,10 @@
 
 /** 1 - Alternates
 ------------------------------------------------------------*/
+:is(.h3--alt,.h4--alt,.h5--alt,.h6--alt){
+    @extend .uppercase;
+}
+
+:is(.h4--quote,.h5--quote,.h6--quote){
+    @extend .italic;
+}

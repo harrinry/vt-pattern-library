@@ -6,7 +6,7 @@ body {
 }
 
 .yield {
-  margin: 0 auto;
+  margin: auto;
   max-width: 90%;
   min-width: 600px;
 }
