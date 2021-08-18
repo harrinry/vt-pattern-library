@@ -16,4 +16,47 @@ $colors: (
   cool-neutral-6:     #d9d9d6,
   warm-neutral-1:     #e1b87f,
   warm-neutral-2:     #efdbb2,
-)
+);
+
+$primary-blue: map-get($colors, primary-blue);
+$primary-green: map-get($colors, primary-green);
+$accessible-green: map-get($colors, accessible-green);
+$secondary-blue-1: map-get($colors, secondary-blue-1);
+$secondary-blue-2: map-get($colors, secondary-blue-2);
+$secondary-green-1: map-get($colors, secondary-green-1);
+$secondary-green-2: map-get($colors, secondary-green-2);
+$secondary-orange-1: map-get($colors, secondary-orange-1);
+$secondary-orange-2: map-get($colors, secondary-orange-2);
+$cool-neutral-1: map-get($colors, cool-neutral-1);
+$cool-neutral-2: map-get($colors, cool-neutral-2);
+$cool-neutral-3: map-get($colors, cool-neutral-3);
+$cool-neutral-4: map-get($colors, cool-neutral-4);
+$cool-neutral-5: map-get($colors, cool-neutral-5);
+$cool-neutral-6: map-get($colors, cool-neutral-6);
+$warm-neutral-1: map-get($colors, warm-neutral-1);
+$warm-neutral-2: map-get($colors, warm-neutral-2);
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 866px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+$breakpoint-classes: (small medium large);
+
+@mixin breakpoint($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
