@@ -12,6 +12,7 @@
 @import 'modern-css-reset';
 
 // Start loading theme files, starting with 'base'
+@import 'partials/mixin';
 @import 'partials/base';
 @import 'partials/forms';
 @import 'partials/headers';
