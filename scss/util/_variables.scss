@@ -1,6 +1,7 @@
 $colors: (
   primary-blue:       #051c2c,
   primary-green:      #6cc24a,
+  primary-white:      #FFFFFF,
   accessible-green:   #509e2f,
   secondary-blue-1:   #003e51,
   secondary-blue-2:   #004f71,
@@ -20,6 +21,7 @@ $colors: (
 
 $primary-blue: map-get($colors, primary-blue);
 $primary-green: map-get($colors, primary-green);
+$primary-white: map-get($colors, primary-white);
 $accessible-green: map-get($colors, accessible-green);
 $secondary-blue-1: map-get($colors, secondary-blue-1);
 $secondary-blue-2: map-get($colors, secondary-blue-2);
@@ -44,3 +46,10 @@ $breakpoints: (
   xxlarge: 1440px,
 );
 $breakpoint-classes: (small medium large);
+
+$themes: (
+  bg-prim-blue: (color: $primary-white, rollover-color: $primary-blue, background-color: $primary-blue, primary-accent: $primary-green, secondary-accent: $secondary-green-1),
+  bg-sec-blue: (color: $primary-white, rollover-color: $primary-blue, background-color: $secondary-blue-1, primary-accent: $primary-green, secondary-accent: $secondary-green-1),
+  bg-green: (color: $primary-blue, rollover-color: $primary-white, background-color: $primary-green, primary-accent: $secondary-blue-1, secondary-accent: $cool-neutral-1),
+  bg-white: (color: $primary-blue, rollover-color: $primary-white, background-color: $primary-white, primary-accent: $accessible-green, secondary-accent: $secondary-green-2)
+);

@@ -58,23 +58,98 @@
   }
 }
 
-.tertiary-info {
-  @extend .tk-aktiv-grotesk, .uppercase;
+[class^="tertiary-info"] {
+  @extend .tk-aktiv-grotesk;
+  @extend .uppercase;
+
+  font-size: 1.4rem;
+  line-height: 1.286;
   font-weight: 700;
   letter-spacing: 0.3rem;
+}
 
-  &-1 {
+.tertiary-info {
+  &--large {
     font-size: 1.6rem;
-    line-height: 1.250;
+    line-height: 1.25;
   }
 
-  &-2 {
-    font-size: 1.4rem;
-    line-height: 1.286;
-  }
-
-  &-3 {
+  &--small {
     font-size: 1.2rem;
     line-height: 1.333;
+  }
+}
+
+.a {
+  @extend a, .p--body;
+
+  @include theming($themes) {
+    color: get-theme-value(color);
+    background-color: get-theme-value(background-color);
+
+    background: linear-gradient(currentColor 0 0) 0 100% / var(--d, 0) 0.2rem
+      no-repeat;
+    transition: 0.3s;
+    &:hover {
+      --d: 100%;
+    }
+
+    @include mod(primary) {
+      background: linear-gradient(get-theme-value(primary-accent) 0 0) 0 100% /
+        var(--d, 0) 0.2rem no-repeat;
+    }
+
+    @include mod(secondary) {
+      background: linear-gradient(get-theme-value(secondary-accent) 0 0) 0 100% /
+        var(--d, 0) 0.2rem no-repeat;
+    }
+
+    @include mod(link) {
+      @extend [class^="tertiary-info"];
+      font-weight: 700;
+    }
+  }
+}
+
+// this is affecting button-group
+// [class^="button"] {
+//   @extend [class^="tertiary-info"];
+//   display: inline-block;
+// }
+
+.button {
+  @include theming($themes) {
+    @extend [class^="tertiary-info"];
+    display: inline-block;
+    color: get-theme-value(color);
+    background-color: get-theme-value(background-color);
+
+    &:hover {
+      color: get-theme-value(rollover-color);
+      background-color: get-theme-value(color);
+      border: 0.2rem solid get-theme-value(color);
+      transition: background-color 250ms ease-out, border-color 250ms ease-out,
+        color 250ms ease-out;
+    }
+
+    @include mod(primary) {
+      border: 0.2rem solid get-theme-value(primary-accent);
+    }
+
+    @include mod(secondary) {
+      border: 0.2rem solid get-theme-value(secondary-accent);
+    }
+
+    @include mod(small) {
+      padding: 1.2rem;
+    }
+
+    @include mod(medium) {
+      padding: 1.6rem;
+    }
+
+    @include mod(large) {
+      padding: 2.1rem 2rem;
+    }
   }
 }

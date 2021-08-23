@@ -12,3 +12,20 @@
 .italic {
   font-style: italic;
 }
+
+.section {
+  @include theming($themes) {
+    color : get-theme-value(color);
+    background-color: get-theme-value(background-color);
+  }
+}
+
+.button-group {
+  .stacked {
+    display: block;
+  }
+  & > *:not(:last-child) {
+    margin-bottom: 1rem;
+    margin-right: 1rem;  
+  }
+}

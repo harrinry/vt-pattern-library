@@ -65,6 +65,10 @@ a {
   background-color: transparent;
 }
 
+button {
+  @extend .button;
+}
+
 blockquote {
   @extend .h6--quote;
 
