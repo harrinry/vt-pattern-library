@@ -8,3 +8,14 @@
 .uppercase {
   text-transform: uppercase;
 }
+
+.italic {
+  font-style: italic;
+}
+
+.section {
+  @include theming($themes) {
+    color: get-theme-value(color);
+    background-color: get-theme-value(background-color);
+  }
+}

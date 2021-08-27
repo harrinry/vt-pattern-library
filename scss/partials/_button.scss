@@ -1,0 +1,88 @@
+@include mod(anchor, link) {
+  @extend [class^="tertiary-info"];
+  font-weight: 700;
+}
+
+[class^="button"] {
+  @extend [class^="tertiary-info"];
+  display: inline-block;
+  text-align: center;
+}
+
+[class^="button--small"] {
+  padding: 1.2rem;
+}
+
+[class^="button--medium"] {
+  padding: 1.6rem;
+}
+
+[class^="button--large"] {
+  padding: 2.1rem 2rem;
+}
+
+@include mod(button, flex) {
+  width: 100%;
+}
+
+.section {
+  @include theming($themes) {
+    [class^="button"] {
+      &:hover {
+        color: get-theme-value(rollover-color);
+        background-color: get-theme-value(color);
+        border: 0.2rem solid get-theme-value(color);
+        transition: background-color 250ms ease-out, border-color 250ms ease-out,
+          color 250ms ease-out;
+      }
+    }
+
+    @include mod(button, primary) {
+      border: 0.2rem solid get-theme-value(primary-accent);
+      &:hover {
+        border: 0.2rem solid get-theme-value(color);
+      }
+    }
+
+    @include mod(button, secondary) {
+      border: 0.2rem solid get-theme-value(secondary-accent);
+      &:hover {
+        border: 0.2rem solid get-theme-value(color);
+      }
+    }
+
+    [class^="anchor"] {
+      color: get-theme-value(color);
+      background-color: get-theme-value(background-color);
+      display: inline-block;
+      padding-bottom: 0.2rem;
+      background: linear-gradient(currentColor 0 0) 0 100% / var(--d, 0) 0.2rem
+        no-repeat;
+      transition: 0.3s;
+
+      &:hover {
+        --d: 100%;
+      }
+    }
+
+    @include mod(anchor, primary) {
+      background: linear-gradient(get-theme-value(primary-accent) 0 0) 0 100% /
+        var(--d, 0) 0.2rem no-repeat;
+    }
+
+    @include mod(anchor, secondary) {
+      background: linear-gradient(get-theme-value(secondary-accent) 0 0) 0 100% /
+        var(--d, 0) 0.2rem no-repeat;
+    }
+  }
+}
+
+.group-button {
+  .stacked {
+    display: block;
+  }
+  & > *:not(:last-child) {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+}

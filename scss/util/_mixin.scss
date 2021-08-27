@@ -1,0 +1,44 @@
+@mixin breakpoint($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@function get-theme-value($key) {
+  @return map-get($exposed-theme-declarations, $key);
+}
+
+// REF: https://codepen.io/Tonours/pen/MzdQZa
+@mixin theming($themes) {
+  @each $theme, $theme-declarations in $themes {
+    @at-root #{&}--#{$theme} {
+      // @extend #{&};
+      @each $property, $value in $theme-declarations {
+        $exposed-theme-declarations: map-merge(
+            $theme-declarations,
+              ($property: $value)
+          ) !global;
+      }
+
+      @content;
+    }
+  }
+}
+
+// REF: https://www.viget.com/articles/bem-multiple-modifiers-and-experimenting-with-attribute-selectors/
+ /* Concatenate Modifier */
+@mixin mod($parent, $modifier) {
+  [class^="#{$parent}"][class*="-#{$modifier}"] {
+    @content;
+  }
+}

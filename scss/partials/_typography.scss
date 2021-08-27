@@ -1,0 +1,81 @@
+.p {
+  @extend p;
+
+  &--lead,
+  &--lead-1 {
+    font-size: 2.8rem;
+    line-height: 1.286;
+  }
+
+  &--lead-emphasis,
+  &--lead-1-emphasis {
+    @extend .p--lead;
+    font-weight: 600;
+  }
+
+  &--lead-2 {
+    font-size: 2.4rem;
+    line-height: 1.167;
+  }
+
+  &--lead-2-emphasis {
+    @extend .p--lead-2;
+    font-weight: 600;
+  }
+
+  &--body {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  &--body-emphasis {
+    @extend .p--body;
+    font-weight: 600;
+  }
+
+  &--body-quote {
+    @extend .p--body, .italic;
+  }
+
+  &--body-small {
+    font-size: 1.8rem;
+    line-height: 1.444;
+  }
+
+  &--body-small-emphasis {
+    @extend .p--body-small;
+    font-weight: 600;
+  }
+
+  &--body-extra-small {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  &--body-extra-small-emphasis {
+    @extend .p--body-extra-small;
+    font-weight: 600;
+  }
+}
+
+[class^="tertiary-info"] {
+  @extend .tk-aktiv-grotesk;
+  @extend .uppercase;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  line-height: 1.286;
+}
+
+.tertiary-info {
+  &--large {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  &--small {
+    font-size: 1.2rem;
+    line-height: 1.333;
+  }
+}

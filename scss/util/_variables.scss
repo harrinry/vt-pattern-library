@@ -1,6 +1,7 @@
 $colors: (
   primary-blue:       #051c2c,
   primary-green:      #6cc24a,
+  primary-white:      #ffffff,
   accessible-green:   #509e2f,
   secondary-blue-1:   #003e51,
   secondary-blue-2:   #004f71,
@@ -16,4 +17,39 @@ $colors: (
   cool-neutral-6:     #d9d9d6,
   warm-neutral-1:     #e1b87f,
   warm-neutral-2:     #efdbb2,
-)
+);
+
+$primary-blue: map-get($colors, primary-blue);
+$primary-green: map-get($colors, primary-green);
+$primary-white: map-get($colors, primary-white);
+$accessible-green: map-get($colors, accessible-green);
+$secondary-blue-1: map-get($colors, secondary-blue-1);
+$secondary-blue-2: map-get($colors, secondary-blue-2);
+$secondary-green-1: map-get($colors, secondary-green-1);
+$secondary-green-2: map-get($colors, secondary-green-2);
+$secondary-orange-1: map-get($colors, secondary-orange-1);
+$secondary-orange-2: map-get($colors, secondary-orange-2);
+$cool-neutral-1: map-get($colors, cool-neutral-1);
+$cool-neutral-2: map-get($colors, cool-neutral-2);
+$cool-neutral-3: map-get($colors, cool-neutral-3);
+$cool-neutral-4: map-get($colors, cool-neutral-4);
+$cool-neutral-5: map-get($colors, cool-neutral-5);
+$cool-neutral-6: map-get($colors, cool-neutral-6);
+$warm-neutral-1: map-get($colors, warm-neutral-1);
+$warm-neutral-2: map-get($colors, warm-neutral-2);
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 866px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+$breakpoint-classes: (small medium large);
+
+$themes: (
+  bg-prim-blue: (color: $primary-white, rollover-color: $primary-blue, background-color: $primary-blue, primary-accent: $primary-green, secondary-accent: $secondary-green-1),
+  bg-sec-blue: (color: $primary-white, rollover-color: $primary-blue, background-color: $secondary-blue-1, primary-accent: $primary-green, secondary-accent: $secondary-green-1),
+  bg-green: (color: $primary-blue, rollover-color: $primary-white, background-color: $primary-green, primary-accent: $secondary-blue-1, secondary-accent: $cool-neutral-1),
+  bg-white: (color: $primary-blue, rollover-color: $primary-white, background-color: $primary-white, primary-accent: $accessible-green, secondary-accent: $secondary-green-2)
+);

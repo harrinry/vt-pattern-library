@@ -7,12 +7,14 @@
 // SCSS stuff we need to render and process everything
 @import 'util/variables';
 @import 'util/fonts';
-
+@import 'util/mixin';
 // Zero everything out, just in case
 @import 'modern-css-reset';
 
 // Start loading theme files, starting with 'base'
+@import 'partials/utility';
 @import 'partials/base';
+@import 'partials/button';
 @import 'partials/forms';
 @import 'partials/headers';
-@import 'partials/utility';
+@import 'partials/typography';
