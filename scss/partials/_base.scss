@@ -2,6 +2,15 @@
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Document Base
 2 — Headers
+3 — Paragraph Text
+4 — Anchor
+5 — Blockquote
+6 — Time
+7 — Lists
+  7.1 — Unordered List
+  7.2 — Definition List
+7 — Horizontal Rule
+9 — Preformatted Text
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Document Base
@@ -53,6 +62,8 @@ h6, .h6 {
   line-height: 1.143;
 }
 
+/** 3 - Paragraph Text
+------------------------------------------------------------*/
 p {
   @extend .tk-degular-text;
 
@@ -61,14 +72,14 @@ p {
   line-height: 1.4;
 }
 
+/** 4 - Anchors
+------------------------------------------------------------*/
 a {
   background-color: transparent;
 }
 
-// button {
-//   @extend .button;
-// }
-
+/** 5 - Blockquotes
+------------------------------------------------------------*/
 blockquote {
   @extend .h6--quote;
 
@@ -79,11 +90,18 @@ blockquote {
   }
 }
 
+/** 6 - Time
+------------------------------------------------------------*/
 time {
   @extend .p--body-extra-small;
   color: $secondary-green-1;
 }
 
+/** 7 - Lists
+------------------------------------------------------------*/
+/* =========================
+7.1 - Unordered List
+========================= */
 ul {
   margin: 0;
   font-weight: inherit;
@@ -98,6 +116,9 @@ ul {
   }
 }
 
+/* =========================
+7.2 - Definition List
+========================= */
 dl {
   display: block;
 
@@ -112,10 +133,14 @@ dl {
   }
 }
 
+/** 8 - Horizontal Rule
+------------------------------------------------------------*/
 hr {
   margin: 0;
 }
 
+/** 9 - Preformatted Text
+------------------------------------------------------------*/
 pre {
   overflow: auto;
 }

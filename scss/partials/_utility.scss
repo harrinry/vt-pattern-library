@@ -1,6 +1,7 @@
 /** TABLE OF CONTENTS
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Text
+2 — Containers
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Text
@@ -13,6 +14,8 @@
   font-style: italic;
 }
 
+/** 2 - Containers
+------------------------------------------------------------*/
 .section {
   @include theming($themes) {
     color: get-theme-value(color);
