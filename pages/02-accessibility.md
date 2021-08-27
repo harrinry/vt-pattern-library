@@ -1,5 +1,6 @@
 ---
 title: Accessible Development Practices
+status: draft
 ---
 Front end code for Aquent and Vitamin T propreties strives to maintain compliance with [WCAG 2.1 Level AA](https://www.w3.org/TR/WCAG21/) standards, with forward consideration for emerging [WCAG 3.0](https://www.w3.org/TR/wcag3/) reference specs.
 
