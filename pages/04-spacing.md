@@ -1,5 +1,6 @@
 ---
 title: Grid and Spacing
+status: draft
 ---
 ## Shared Responsive Grid System
 
