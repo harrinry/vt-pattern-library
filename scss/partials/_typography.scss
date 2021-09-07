@@ -1,6 +1,8 @@
-.p {
-  @extend p;
+[class^="p"] {
+  @extend .tk-degular-text;
+}
 
+.p {
   &--lead,
   &--lead-1 {
     font-size: 2.8rem;

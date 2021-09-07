@@ -1,0 +1,444 @@
+// @include breakpoint(large) {
+//   .menu-bar .widescreen-menu {
+//     margin: 1.33rem auto;
+//     text-align: center;
+//   }
+// }
+
+// // .top-nav.has-snap-panel {
+// //     position: absolute;
+// // }
+
+// .menu-bar {
+//   width: 100%;
+//   transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+//   outline: 0;
+
+//   @include breakpoint(large) {
+//     .widescreen-menu {
+//       summary {
+//         padding: 2.6rem 2rem;
+//       }
+//     }
+//   }
+// }
+
+// temp menu size
+#top-menu {
+    width: 1448px;
+}
+
+@include breakpoint(large) {
+  details {
+    //   padding-bottom: 2rem;
+
+    > summary {
+      list-style: none;
+
+      span.menuitems {
+        &::after {
+          content: "\25BE";
+          color: $secondary-green-1;
+        }
+      }
+    }
+
+    &[open] {
+      > summary {
+        span.menuitems {
+          border-bottom: 0.6rem solid $primary-green;
+
+          &::after {
+            content: "\25B4";
+            color: $primary-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-header .grid-container {
+  position: relative;
+  width: 100%;
+}
+
+// .navbar {
+//   min-height: 100px;
+// }
+
+@include breakpoint(large) {
+  .dropdown-menu {
+    display: grid;
+    // position: absolute;
+
+    [class^="button"] {
+      margin-top: 1rem;
+    }
+  }
+
+  .dropdown-menu-main {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .dropdown-menu-sub {
+    background-color: lighten($secondary-green-2, 20%);
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+}
+
+.top-nav {
+  position: absolute;
+  top: 0;
+  z-index: 10; // top nav needs to be above the hero image
+  width: 100%;
+  outline: none;
+  height: 6.5rem;
+
+  @include breakpoint(large) {
+    position: static;
+    height: 100%;
+  }
+}
+
+.site-title {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+
+  @include breakpoint(large) {
+    position: relative;
+  }
+}
+
+/* =======================
+  ******* Mobile Menu ******
+  ========================*/
+.menu-toggle {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+  transition: border-bottom 250ms ease;
+
+  &:active,
+  &:focus {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  border-bottom: 0.2rem solid $primary-white;
+  transition: border-bottom 250ms ease;
+
+  &::after,
+  &::before {
+    height: 0.2rem;
+    width: 100%;
+    left: 0;
+    background: $primary-white;
+    content: "";
+    position: absolute;
+    transition: transform 250ms ease, background 250ms ease;
+  }
+
+  &::before {
+    top: 50%;
+    transform: rotate(-180deg);
+  }
+
+  &::after {
+    top: 0;
+    transform: rotate(180deg);
+  }
+
+  a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    &#close-menu {
+      display: none;
+    }
+
+    &#open-menu {
+      display: inline-block;
+    }
+  }
+}
+
+[class^="arrow"] {
+  border: solid $primary-white;
+  border-width: 0 0.1rem 0.1rem 0;
+  padding: 0.8rem;
+  display: none;
+  @include breakpoint(large) {
+    padding: 0;
+  }
+}
+
+.arrow {
+  &--right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    @include breakpoint(large) {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+      border-top: 0.5rem solid $secondary-green-1;
+      border-bottom: none;
+      margin-left: 2rem;
+      transform: none;
+    }
+  }
+
+  &--left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+}
+
+.top-menu {
+  padding: 2rem;
+
+  details {
+    summary {
+      list-style: none;
+      padding: 2rem 2rem 0 2rem;
+      @include breakpoint(large) {
+        padding: 0;
+        span {
+          display: block;
+          padding: 2rem;
+        }
+      }
+    }
+
+    .arrow {
+      &--right {
+        display: block;
+        float: right;
+        @include breakpoint(large) {
+          float: unset;
+          display: inline-block;
+        }
+      }
+
+      &--left {
+        display: none;
+        float: left;
+        margin-right: 2rem;
+      }
+    }
+
+    .dropdown-menu {
+      z-index: 10;
+      left: 0;
+      width: 100%;
+      height: 92vh;
+      overflow: hidden;
+      /* basic menu styling*/
+      list-style: none;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      background: $primary-white;
+      /* animate slide left to right */
+      transform: translateX(-100%);
+      transition: transform 0.2s ease;
+      @include breakpoint(large) {
+        transform: none;
+        display: grid;
+        height: auto;
+        width: auto;
+        overflow: visible;
+      }
+
+      .dropdown-menu-main {
+        align-self: flex-start;
+        width: 100%;
+      }
+
+      .dropdown-menu-sub {
+        align-self: flex-end;
+        width: 100%;
+      }
+
+      @include breakpoint(large) {
+        .dropdown-menu-main,
+        .dropdown-menu-sub {
+          align-self: unset;
+          width: auto;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      ul {
+        padding: 2.9rem;
+        font-weight: inherit;
+        list-style-type: none;
+      }
+
+      li {
+        display: block;
+
+        &.heading {
+          border-bottom: 0.1rem solid $cool-neutral-4;
+          padding-bottom: 1rem;
+          margin-bottom: 1.6rem;
+        }
+
+        &.sub-heading {
+          color: $secondary-green-1;
+          margin-top: 2rem;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+        &::before {
+          content: "";
+        }
+      }
+    }
+
+    &[open] {
+      position: absolute;
+      top: 0.5rem;
+      width: 100%;
+      @include breakpoint(large) {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        transform: translateX(0);
+      }
+
+      summary {
+        padding: 0 2rem;
+
+        span {
+          background-color: $secondary-blue-1;
+          display: block;
+          padding: 2rem;
+          @include breakpoint(large) {
+            background-color: transparent;
+          }
+        }
+
+        .arrow {
+          &--right {
+            display: none;
+            @include breakpoint(large) {
+              display: inline-block;
+              border-left: 0.5rem solid transparent;
+              border-right: 0.5rem solid transparent;
+              border-bottom: 0.5rem solid $primary-white;
+              border-top: none;
+            }
+          }
+
+          &--left {
+            display: block;
+
+            @include breakpoint(large) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navbar {
+    position: absolute;
+    top: 6.5rem;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* basic menu styling*/
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: auto 2rem;
+    background: $primary-blue;
+    /* animate slide left to right */
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+
+    @include breakpoint(large) {
+      height: 100%;
+      display: grid;
+      position: relative;
+      top: 0;
+      transform: none;
+    }
+
+    &:target {
+      transform: translateX(0);
+      /* 
+        * Transform all the slices of hamburger
+        * into a crossmark.
+        */
+      & ~ .menu-toggle {
+        border-bottom: 0;
+
+        &:after,
+        &:before {
+          height: 0.2rem;
+          width: 100%;
+          top: 50%;
+          left: 0;
+          background: $primary-white;
+          transition: transform 250ms ease, background 250ms ease;
+        }
+
+        &:before {
+          transform: rotate(45deg);
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+        }
+
+        a {
+          position: absolute;
+
+          &#close-menu {
+            display: inline-block;
+          }
+
+          &#open-menu {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.show-for-sr {
+  display: none;
+}
