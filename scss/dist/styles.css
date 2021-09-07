@@ -123,6 +123,7 @@ input, button, textarea, select {
 /** TABLE OF CONTENTS
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Text
+2 — Containers
 /// END TABLE OF CONTENTS **/
 /** 1 - Text
 ------------------------------------------------------------*/
@@ -132,6 +133,8 @@ input, button, textarea, select {
 .italic, .p--body-quote, :is(.h4--quote, .h5--quote, .h6--quote, blockquote) {
   font-style: italic;
 }
+/** 2 - Containers
+------------------------------------------------------------*/
 .section--bg-prim-blue {
   color: #ffffff;
   background-color: #051c2c;
@@ -156,6 +159,15 @@ input, button, textarea, select {
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Document Base
 2 — Headers
+3 — Paragraph Text
+4 — Anchor
+5 — Blockquote
+6 — Time
+7 — Lists
+  7.1 — Unordered List
+  7.2 — Definition List
+7 — Horizontal Rule
+9 — Preformatted Text
 /// END TABLE OF CONTENTS **/
 /** 1 - Document Base
 ------------------------------------------------------------*/
@@ -207,14 +219,21 @@ h6,
   font-size: 2.8rem;
   line-height: 1.143;
 }
-p {
+
+/** 3 - Paragraph Text
+------------------------------------------------------------*/
+p, .p {
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.4;
 }
+/** 4 - Anchors
+------------------------------------------------------------*/
 a {
   background-color: transparent;
 }
+/** 5 - Blockquotes
+------------------------------------------------------------*/
 @media (min-width: 0) {
   blockquote {
     font-size: 4.2rem;
@@ -222,9 +241,16 @@ a {
     line-height: 1.095;
   }
 }
+/** 6 - Time
+------------------------------------------------------------*/
 time {
   color: #477a7b;
 }
+/** 7 - Lists
+------------------------------------------------------------*/
+/* =========================
+7.1 - Unordered List
+========================= */
 ul {
   margin: 0;
   font-weight: inherit;
@@ -237,6 +263,9 @@ ul li::before {
   margin-left: -1rem;
   width: 1rem;
 }
+/* =========================
+7.2 - Definition List
+========================= */
 dl {
   display: block;
 }
@@ -244,9 +273,13 @@ dl dt {
   display: block;
   color: inherit;
 }
+/** 8 - Horizontal Rule
+------------------------------------------------------------*/
 hr {
   margin: 0;
 }
+/** 9 - Preformatted Text
+------------------------------------------------------------*/
 pre {
   overflow: auto;
 }
@@ -504,11 +537,11 @@ pre {
 /** TABLE OF CONTENTS
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Inputs
-1.1 — Single line
-1.2 — Multi line
+  1.1 — Single line
+  1.2 — Multi line
 2 — Selects
-2.1 — Single
-2.2 — Multi
+  2.1 — Single
+  2.2 — Multi
 /// END TABLE OF CONTENTS **/
 /** 1 - Inputs
 ------------------------------------------------------------*/
@@ -960,6 +993,7 @@ pre {
 .show-for-sr {
   display: none;
 }
+
 .p--lead, .p--lead-emphasis, .p--lead-1-emphasis, .p--lead-1 {
   font-size: 2.8rem;
   line-height: 1.286;
@@ -995,6 +1029,8 @@ pre {
 .p--body-extra-small-emphasis {
   font-weight: 600;
 }
+/** 2 - Tertiary Info
+------------------------------------------------------------*/
 [class^=tertiary-info], [class^=anchor][class*=-link], [class^=button] {
   font-size: 1.4rem;
   font-weight: 700;

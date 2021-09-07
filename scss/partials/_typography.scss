@@ -1,3 +1,11 @@
+/** TABLE OF CONTENTS
+ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
+1 — Paragraphs
+2 — Tertiary Info
+/// END TABLE OF CONTENTS **/
+
+/** 1 - Text
+------------------------------------------------------------*/
 [class^="p"] {
   @extend .tk-degular-text;
 }
@@ -60,6 +68,8 @@
   }
 }
 
+/** 2 - Tertiary Info
+------------------------------------------------------------*/
 [class^="tertiary-info"] {
   @extend .tk-aktiv-grotesk;
   @extend .uppercase;
