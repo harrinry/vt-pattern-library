@@ -25,7 +25,7 @@
 
 // temp menu size
 #top-menu {
-    width: 1448px;
+  width: 1448px;
 }
 
 @include breakpoint(large) {
@@ -70,7 +70,7 @@
 @include breakpoint(large) {
   .dropdown-menu {
     display: grid;
-    // position: absolute;
+    position: absolute;
 
     [class^="button"] {
       margin-top: 1rem;
@@ -185,7 +185,7 @@
 }
 
 .arrow {
-  &--right {
+  &--after {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     @include breakpoint(large) {
@@ -201,7 +201,7 @@
     }
   }
 
-  &--left {
+  &--before {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
   }
@@ -224,7 +224,7 @@
     }
 
     .arrow {
-      &--right {
+      &--after {
         display: block;
         float: right;
         @include breakpoint(large) {
@@ -233,7 +233,7 @@
         }
       }
 
-      &--left {
+      &--before {
         display: none;
         float: left;
         margin-right: 2rem;
@@ -250,7 +250,7 @@
       list-style: none;
       display: flex;
       flex-flow: column nowrap;
-      justify-content: space-evenly;
+      //   justify-content: space-evenly;
       background: $primary-white;
       /* animate slide left to right */
       transform: translateX(-100%);
@@ -259,7 +259,7 @@
         transform: none;
         display: grid;
         height: auto;
-        width: auto;
+        width: max-content;
         overflow: visible;
       }
 
@@ -330,6 +330,14 @@
       summary {
         padding: 0 2rem;
 
+        @include breakpoint(medium) {
+          padding: 0;
+        }
+
+        @include breakpoint(large) {
+          padding: 0;
+        }
+
         span {
           background-color: $secondary-blue-1;
           display: block;
@@ -340,7 +348,7 @@
         }
 
         .arrow {
-          &--right {
+          &--after {
             display: none;
             @include breakpoint(large) {
               display: inline-block;
@@ -351,7 +359,7 @@
             }
           }
 
-          &--left {
+          &--before {
             display: block;
 
             @include breakpoint(large) {
@@ -375,19 +383,26 @@
     list-style: none;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    padding: auto 2rem;
+    // justify-content: center;
+    padding: 5rem 2rem 0 0;
     background: $primary-blue;
     /* animate slide left to right */
     transform: translateX(-100%);
     transition: transform 0.2s ease;
 
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+
     @include breakpoint(large) {
       height: 100%;
+      width: 100%;
       display: grid;
       position: relative;
       top: 0;
       transform: none;
+      overflow: visible;
+      padding: 2rem;
     }
 
     &:target {

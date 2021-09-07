@@ -28,6 +28,9 @@
 .section {
   @include theming($themes) {
     [class^="button"] {
+      color: get-theme-value(color);
+      text-decoration: none;
+
       &:hover {
         color: get-theme-value(rollover-color);
         background-color: get-theme-value(color);
