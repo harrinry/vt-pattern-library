@@ -286,6 +286,8 @@ pre {
   font-weight: 700;
 }
 [class^=button] {
+  text-decoration: none;
+  cursor: pointer;
   display: inline-block;
   text-align: center;
 }
@@ -303,7 +305,7 @@ pre {
 }
 .section--bg-prim-blue [class^=button] {
   color: #ffffff;
-  text-decoration: none;
+  background-color: #051c2c;
 }
 .section--bg-prim-blue [class^=button]:hover {
   color: #051c2c;
@@ -352,7 +354,7 @@ pre {
 }
 .section--bg-sec-blue [class^=button] {
   color: #ffffff;
-  text-decoration: none;
+  background-color: #003e51;
 }
 .section--bg-sec-blue [class^=button]:hover {
   color: #051c2c;
@@ -401,7 +403,7 @@ pre {
 }
 .section--bg-green [class^=button] {
   color: #051c2c;
-  text-decoration: none;
+  background-color: #6cc24a;
 }
 .section--bg-green [class^=button]:hover {
   color: #ffffff;
@@ -450,7 +452,7 @@ pre {
 }
 .section--bg-white [class^=button] {
   color: #051c2c;
-  text-decoration: none;
+  background-color: #ffffff;
 }
 .section--bg-white [class^=button]:hover {
   color: #ffffff;

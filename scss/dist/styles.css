@@ -286,6 +286,8 @@ pre {
   font-weight: 700;
 }
 [class^=button] {
+  text-decoration: none;
+  cursor: pointer;
   display: inline-block;
   text-align: center;
 }
