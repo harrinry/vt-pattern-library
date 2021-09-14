@@ -1,6 +1,6 @@
 // temp menu size
 #top-nav {
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     width: 1440px;
   }
 }
@@ -13,7 +13,7 @@
   outline: none;
   height: 6.5rem;
 
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     position: static;
     height: 100%;
   }
@@ -24,14 +24,14 @@
   right: 0;
   z-index: 10;
 
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     position: relative;
     margin: 2rem 0;
   }
 
   &__img {
     width: 18rem;
-    @include breakpoint(large) {
+    @include breakpoint(desktop) {
       max-width: 18rem;
     }
   }
@@ -53,7 +53,7 @@
   transition: border-bottom 250ms ease;
   border-bottom: 0.3rem solid $primary-white;
 
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     display: none;
   }
 
@@ -107,7 +107,7 @@
   position: relative;
   width: 100%;
   padding: 2rem;
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-column-gap: 0;
@@ -117,7 +117,7 @@
   @at-root [class^="top-menu__arrow"] {
     padding: 0.8rem;
     display: none;
-    @include breakpoint(large) {
+    @include breakpoint(desktop) {
       padding: 0;
     }
   }
@@ -130,7 +130,7 @@
       border-width: 0 0.1rem 0.1rem 0;
       transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
-      @include breakpoint(large) {
+      @include breakpoint(desktop) {
         display: inline-block;
         width: 0;
         height: 0;
@@ -192,7 +192,7 @@
   &__button {
     width: fit-content;
     margin-top: 2rem;
-    @include breakpoint(large) {
+    @include breakpoint(desktop) {
       margin-left: auto;
       margin-top: auto;
       margin-bottom: auto;
@@ -201,7 +201,7 @@
   }
 
   &__label {
-    @include breakpoint(large) {
+    @include breakpoint(desktop) {
       display: block;
       padding: 2rem 0;
     }
@@ -210,7 +210,7 @@
   &__menuitem {
     list-style: none;
     padding: 2rem 0;
-    @include breakpoint(large) {
+    @include breakpoint(desktop) {
       padding: 0 0 0 3rem;
     }
   }
@@ -220,7 +220,7 @@
     border-left: none;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    @include breakpoint(large) {
+    @include breakpoint(desktop) {
       border-top: none;
       border-left: 0.1rem solid $cool-neutral-2;
       margin-left: 3rem;
@@ -235,7 +235,7 @@
       top: 0.5rem;
       left: 0;
       width: 100%;
-      @include breakpoint(large) {
+      @include breakpoint(desktop) {
         position: relative;
       }
 
@@ -247,11 +247,11 @@
         &__menuitem {
           padding: 0 2rem;
 
-          @include breakpoint(medium) {
+          @include breakpoint(tablet) {
             padding: 0;
           }
 
-          @include breakpoint(large) {
+          @include breakpoint(desktop) {
             padding: 0 0 0 3rem;
           }
         }
@@ -260,7 +260,7 @@
           background-color: $secondary-blue-1;
           display: block;
           padding: 2rem;
-          @include breakpoint(large) {
+          @include breakpoint(desktop) {
             background-color: transparent;
             border-bottom: 0.6rem solid $primary-green;
             padding: 2rem 0;
@@ -270,7 +270,7 @@
         &__arrow {
           &--after {
             display: none;
-            @include breakpoint(large) {
+            @include breakpoint(desktop) {
               display: inline-block;
               border-left: 0.5rem solid transparent;
               border-right: 0.5rem solid transparent;
@@ -282,7 +282,7 @@
           &--before {
             display: block;
 
-            @include breakpoint(large) {
+            @include breakpoint(desktop) {
               display: none;
             }
           }
@@ -311,11 +311,11 @@
   transform: translateY(-100%);
   transition: transform 0.2s ease;
 
-  @include breakpoint(medium) {
+  @include breakpoint(tablet) {
     width: 50%;
   }
 
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     height: 100%;
     width: 100%;
     display: grid;
@@ -386,7 +386,7 @@
   flex-flow: column nowrap;
   //   justify-content: space-evenly;
   background: $primary-white;
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     transform: none;
     display: grid;
     position: absolute;
@@ -399,7 +399,7 @@
     align-self: flex-start;
     width: 100%;
 
-    @include breakpoint(large) {
+    @include breakpoint(desktop) {
       grid-column-start: 1;
       grid-column-end: 4;
     }
@@ -409,7 +409,7 @@
     align-self: flex-end;
     width: 100%;
 
-    @include breakpoint(large) {
+    @include breakpoint(desktop) {
       background-color: lighten($secondary-green-2, 20%);
       grid-column-start: 4;
       grid-column-end: 5;
@@ -418,7 +418,7 @@
 
   &--main,
   &--sub {
-    @include breakpoint(large) {
+    @include breakpoint(desktop) {
       align-self: unset;
       width: auto;
     }
@@ -448,7 +448,7 @@
 
 .hidden-for-desktop {
   display: relative;
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
