@@ -67,7 +67,6 @@
     [class^="anchor"] {
       color: get-theme-value(color);
       background-color: get-theme-value(background-color);
-      display: inline-block;
       padding-bottom: 0.2rem;
       background: linear-gradient(currentColor 0 0) 0 100% / var(--d, 0) 0.2rem
         no-repeat;
