@@ -1,12 +1,10 @@
-<footer id="site-footer" class="site-footer">
+<footer>
   <div class="section--bg-prim-blue vt-footer">
     <nav class="footer__content">
       <div class="grid-container footer__nav">
-        <div class="site-title">
-          <a class="logo" href="/" title="Vitamin T">
-            <img src="/img/Vitamin_T_Primary_Wordmark_RGB_Reverse.svg" />
-          </a>
-        </div>
+        <a class="footer__logo" href="/" title="Vitamin T">
+          <img src="/img/Vitamin_T_Primary_Wordmark_RGB_Reverse.svg" />
+        </a>
         {{! <div class="footer__buttons group-button"> }}
         <a
           href="https://my.aquent.com/mat/myaquent?PROC=AWUIDrawMatLogin&amp;locale=en_US"
@@ -19,8 +17,10 @@
           title="Find Opportunities"
         >Find Opportunities</a>
         {{! </div> }}
-      </div>
+      </div><!-- .grid-container.footer__nav -->
+
       <hr class="footer__divider" />
+
       <div class="grid-container footer__main-nav">
         <div class="margin-bottom-4">
           <h4 class="tertiary-info footer__title">Who We Are</h4>
@@ -33,7 +33,8 @@
             title="Get To Know Us"
             class="anchor--secondary"
           ><span class="p--body-small">Get To Know Us</span></a>
-        </div>
+        </div><!-- .margin-bottom-4 -->
+
         <div class="margin-bottom-4">
           <h4 class="tertiary-info footer__title">Affiliated Sites</h4>
           <ul class="footer__ul">
@@ -68,7 +69,8 @@
                 class="anchor--secondary"
               ><span class="p--body-small">Scout</span></a></li>
           </ul>
-        </div>
+        </div><!-- .margin-bottom-4 -->
+
         <div class="margin-bottom-4 support">
           <h4 class="tertiary-info footer__title">Support</h4>
           <ul class="footer__ul">
@@ -107,39 +109,41 @@
       </div>
     </nav>
   </div><!-- .vt-footer -->
-  <div class="section--bg-sec-blue bottom-footer">
+
+  <div class="section--bg-sec-blue">
     <a class="show-for-sr show-on-focus" href="#top-nav">Skip To Nav</a>
     <a class="show-for-sr show-on-focus" href="#content">Skip To Content</a>
     <div class="grid-container footer__content footer__bottom-nav">
       <div class="p--body-extra-small site-trademark">
-        © 2021 Aquent LLC. Vitamin T is a registered trademark of Aquent LLC.
+        &copy; 2021 Aquent LLC. Vitamin T is a registered trademark of Aquent LLC.
       </div>
+
       <nav class="footer__social">
         <a
           href="https://www.linkedin.com/company/aquent"
           title="LinkedIn"
-          class="icon linkedin"
+          class="social-icon--linkedin"
           target="_blank"
         ><span class="show-for-sr">LinkedIn</span></a>
         <a
           href="https://twitter.com/Vitamin T"
           title="Twitter"
-          class="icon twitter"
+          class="social-icon--twitter"
           target="_blank"
         ><span class="show-for-sr">Twitter</span></a>
         <a
           href="https://www.linkedin.com/company/aquent"
           title="LinkedIn"
-          class="icon instagram"
+          class="social-icon--instagram"
           target="_blank"
         ><span class="show-for-sr">Instagram</span></a>
         <a
           href="https://www.facebook.com/aquent/"
           title="Facebook"
-          class="icon facebook orange"
+          class="social-icon--facebook"
           target="_blank"
         ><span class="show-for-sr">Facebook</span></a>
       </nav>
-    </div>
-  </div><!-- .bottom-footer -->
+    </div><!-- .grid-container.footer__content.footer__bottom-nav -->
+  </div><!-- .section--bg-sec-blue -->
 </footer>

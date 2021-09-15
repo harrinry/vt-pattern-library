@@ -12,30 +12,11 @@ footer {
   padding-bottom: 4rem;
 }
 
-.site-title {
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  width: 18rem;
-  @include breakpoint(desktop) {
-    margin-bottom: 0;
-  }
-}
-
 .site-trademark {
   color: $cool-neutral-4;
 }
 
 .footer {
-  &__nav {
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 1.5rem;
-    @include breakpoint(tablet) {
-      grid-template-columns: 1fr auto auto;
-      grid-column-gap: 1.5rem;
-      grid-auto-flow: column;
-    }
-  }
-
   &__button {
     margin-left: auto;
     @include breakpoint(desktop) {
@@ -48,6 +29,26 @@ footer {
     margin: 5rem 0;
     @include breakpoint(tablet) {
       margin: 4rem 0;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    width: 18rem;
+    @include breakpoint(desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 1.5rem;
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr auto auto;
+      grid-column-gap: 1.5rem;
+      grid-auto-flow: column;
     }
   }
 
