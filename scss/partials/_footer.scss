@@ -4,10 +4,6 @@ footer {
   }
 }
 
-.grid-container {
-  display: grid;
-}
-
 .vt-footer {
   padding-bottom: 4rem;
 }
@@ -43,6 +39,7 @@ footer {
   }
 
   &__nav {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 1.5rem;
     @include breakpoint(tablet) {
@@ -90,6 +87,7 @@ footer {
   }
 
   &__main-nav {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 5.5rem;
     @include breakpoint(desktop) {
@@ -119,6 +117,7 @@ footer {
   }
 
   &__bottom-nav {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 2.5rem;
     @include breakpoint(desktop) {
