@@ -4,8 +4,13 @@
  export default class Menu {
   constructor() {
     const menu = document.getElementById('navbar');
-    menu.querySelectorAll('details').forEach((detail, _, details) => {
-      detail.ontoggle = _ => { if(detail.open) details.forEach(summary =>{ if(summary!=detail) summary.removeAttribute('open') })}
+
+    menu.querySelectorAll('details').forEach((thisDetail, _, details) => {
+      thisDetail.ontoggle = _ => { 
+        if(thisDetail.open) details.forEach(thatDetail => { 
+          if(thatDetail != thisDetail) thatDetail.removeAttribute('open');
+        });
+      }
     });
   }
 }
