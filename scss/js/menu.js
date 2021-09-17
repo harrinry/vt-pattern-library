@@ -3,6 +3,9 @@
  */
  export default class Menu {
   constructor() {
-    console.log('[Class: Menu] constructor() running');
+    const menu = document.getElementById('navbar');
+    menu.querySelectorAll('details').forEach((detail, _, details) => {
+      detail.ontoggle = _ => { if(detail.open) details.forEach(summary =>{ if(summary!=detail) summary.removeAttribute('open') })}
+    });
   }
 }
