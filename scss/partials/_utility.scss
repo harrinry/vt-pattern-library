@@ -2,7 +2,7 @@
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Text
 2 — Containers
-3 - Accessibility
+3 - Accessibility and Visibility
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Text
@@ -24,8 +24,19 @@
   }
 }
 
-/** 3 - Accessibility
+/** 3 - Accessibility and Visibility
 ------------------------------------------------------------*/
+.hidden {
+  display: none;
+}
+
+.hidden-for-desktop {
+  display: relative;
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
 .show-for-sr {
   position: absolute;
   width: 1px;
