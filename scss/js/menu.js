@@ -3,14 +3,32 @@
  */
  export default class Menu {
   constructor() {
-    const menu = document.querySelector('.navbar');
+    let navbar = document.querySelector('.navbar');
+    let menus = navbar.querySelectorAll('details');
 
-    menu.querySelectorAll('details').forEach((thisDetail, _, details) => {
+    // Close an open menu if another menu item is opened
+    menus.forEach((thisDetail, _, details) => {
       thisDetail.ontoggle = _ => { 
         if(thisDetail.open) details.forEach(thatDetail => { 
           if(thatDetail != thisDetail) thatDetail.removeAttribute('open');
         });
       }
+    });
+
+    // Close open menus if the user clicks on a non-menu item
+    document.addEventListener('click', function() {
+      menus.forEach((thisDetail) => {
+        if(thisDetail.open) thisDetail.removeAttribute('open');
+      });
+      return;
+    });
+
+    // Close open menus if the esc key is pressed
+    document.addEventListener('keydown', (e) => {
+      if (e.key == 'Escape') menus.forEach((thisDetail) => {
+        if(thisDetail.open) thisDetail.removeAttribute('open');
+      });
+      return;
     });
   }
 }
