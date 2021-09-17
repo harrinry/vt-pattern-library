@@ -2,7 +2,7 @@
   "name": "vt-pattern-library",
   "version": "1.0.0",
   "description": "",
-  "main": "scss/main.js",
+  "main": "index.js",
   "dependencies": {
     "@frctl/fractal": "^1.5.11",
     "@frctl/mandelbrot": "^1.9.4",
