@@ -200,6 +200,20 @@
     cursor: pointer;
     list-style: none;
     padding: 2rem 0;
+    position: relative;
+
+    &:before {
+      background-color: $secondary-green-1;
+      clip-path: polygon(88% 12%, 100% 0, 100% 95%, 95% 100%, 0 100%, 12% 88%, 88% 88%);
+      content: '';
+      display: block;
+      height: 1.5rem;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+      width: 1.5rem;
+    }
 
     @include breakpoint(desktop) {
       padding: 0 0 0 3rem;
@@ -227,6 +241,7 @@
       position: absolute;
       top: 0;
       width: 100%;
+      z-index: 1;
 
       @include breakpoint(desktop) {
         position: relative;
