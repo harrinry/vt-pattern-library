@@ -1,4 +1,10 @@
-// temp menu size
+/** TABLE OF CONTENTS
+ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
+1 — Top Nav Wrapper
+/// END TABLE OF CONTENTS **/
+
+/** 1 - Top Nav Wrapper
+------------------------------------------------------------*/
 .top-nav {
   position: absolute;
   top: 0;
@@ -10,7 +16,6 @@
   @include breakpoint(desktop) {
     position: static;
     height: 100%;
-    width: 144rem;
   }
 
   &__img {
