@@ -104,61 +104,22 @@
 }
 
 .top-menu {
+  align-items: center;
+  padding: 2rem;
   position: relative;
   width: 100%;
-  padding: 2rem;
+  
   @include breakpoint(desktop) {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-column-gap: 0;
     grid-auto-flow: column;
-  }
-
-  @at-root [class^="top-menu__arrow"] {
-    padding: 0.8rem;
-    display: none;
-    @include breakpoint(desktop) {
-      padding: 0;
-    }
-  }
-
-  &__arrow {
-    &--after {
-      display: block;
-      float: right;
-      border: solid $secondary-green-1;
-      border-width: 0 0.1rem 0.1rem 0;
-      transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
-      @include breakpoint(desktop) {
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-left: 0.5rem solid transparent;
-        border-right: 0.5rem solid transparent;
-        border-top: 0.5rem solid $secondary-green-1;
-        border-bottom: none;
-        margin-left: 0.8rem;
-        float: unset;
-        transform: none;
-      }
-    }
-
-    &--before {
-      display: none;
-      float: left;
-      border: solid $primary-white;
-      border-width: 0 0.1rem 0.1rem 0;
-      margin-right: 2rem;
-      transform: rotate(135deg);
-      -webkit-transform: rotate(135deg);
-    }
+    grid-column-gap: 0;
+    grid-template-columns: 1fr 4fr; 
   }
 
   &__ul {
-    padding: 2.9rem;
     font-weight: inherit;
     list-style-type: none;
+    padding: 2.9rem;    
   }
 
   &__li {
@@ -192,6 +153,7 @@
   &__button {
     width: fit-content;
     margin-top: 2rem;
+
     @include breakpoint(desktop) {
       margin-left: auto;
       margin-top: auto;
@@ -202,14 +164,43 @@
 
   &__label {
     @include breakpoint(desktop) {
+      border: 1px dotted red;
       display: block;
-      padding: 2rem 0;
+      padding: 2rem 1.774rem 2rem 0;
+      position: relative;
+
+      &::before {
+        background-color: $secondary-green-2;
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+        content: "";
+        display: block;
+        height: 0.5rem;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.974rem;
+      }
+
+      @at-root [open] #{&} {
+        @include breakpoint(desktop) {
+          border-bottom: 0.6rem solid $primary-green;
+          padding-bottom: 1.4rem;
+
+          &::before {
+            background-color: $primary-white;
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+          }
+        }
+      }
     }
   }
 
   &__menuitem {
+    cursor: pointer;
     list-style: none;
     padding: 2rem 0;
+
     @include breakpoint(desktop) {
       padding: 0 0 0 3rem;
     }
@@ -220,6 +211,7 @@
     border-left: none;
     margin-top: 2rem;
     margin-bottom: 2rem;
+
     @include breakpoint(desktop) {
       border-top: none;
       border-left: 0.1rem solid $cool-neutral-2;
@@ -231,10 +223,11 @@
 
   &__details {
     &[open] {
+      left: 0;
       position: absolute;
       top: 0.5rem;
-      left: 0;
       width: 100%;
+
       @include breakpoint(desktop) {
         position: relative;
       }
@@ -253,38 +246,6 @@
 
           @include breakpoint(desktop) {
             padding: 0 0 0 3rem;
-          }
-        }
-
-        &__label {
-          background-color: $secondary-blue-1;
-          display: block;
-          padding: 2rem;
-          @include breakpoint(desktop) {
-            background-color: transparent;
-            border-bottom: 0.6rem solid $primary-green;
-            padding: 2rem 0;
-          }
-        }
-
-        &__arrow {
-          &--after {
-            display: none;
-            @include breakpoint(desktop) {
-              display: inline-block;
-              border-left: 0.5rem solid transparent;
-              border-right: 0.5rem solid transparent;
-              border-bottom: 0.5rem solid $primary-white;
-              border-top: none;
-            }
-          }
-
-          &--before {
-            display: block;
-
-            @include breakpoint(desktop) {
-              display: none;
-            }
           }
         }
       }
