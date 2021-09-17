@@ -3,7 +3,7 @@
  */
  export default class Menu {
   constructor() {
-    const menu = document.getElementById('navbar');
+    const menu = document.querySelector('.navbar');
 
     menu.querySelectorAll('details').forEach((thisDetail, _, details) => {
       thisDetail.ontoggle = _ => { 
