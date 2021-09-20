@@ -1,6 +1,7 @@
 /** TABLE OF CONTENTS
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Top Nav Wrapper
+2 — Mobile Hamburger Menu
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Top Nav Wrapper
@@ -38,9 +39,8 @@
   }
 }
 
-/* =======================
-  ******* Mobile Menu ******
-  ========================*/
+/** 2 - Mobile Hamburger Menu
+------------------------------------------------------------*/
 .menu-toggle {
   background: transparent;
   border: none;
