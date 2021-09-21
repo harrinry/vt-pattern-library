@@ -54,3 +54,10 @@ $themes: (
   bg-white: (color: $primary-blue, rollover-color: $primary-white, background-color: $primary-white, primary-accent: $accessible-green, secondary-accent: $secondary-green-2),
   bg-sec-green: (color: $primary-blue, rollover-color: $primary-white, background-color: $secondary-green-2, primary-accent: $accessible-green, secondary-accent: $secondary-green-2)
 );
+
+$grid-mobile-gap: 1rem;
+$grid-mobile-margin: 2rem;
+$grid-tablet-gap: 1rem;
+$grid-tablet-margin: 2rem;
+$grid-desktop-gap: 1.5rem;
+$grid-desktop-margin: 3rem;
