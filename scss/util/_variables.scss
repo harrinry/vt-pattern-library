@@ -110,3 +110,94 @@ $grid-tablet-gap: 1rem;
 $grid-tablet-margin: 2rem;
 $grid-desktop-gap: 1.5rem;
 $grid-desktop-margin: 3rem;
+
+/** 4 - Spacing
+------------------------------------------------------------*/
+// Given design vertical spacing is the measure between
+// element's baseline and following sibling element's ascender line
+
+$design-vertical-spacing: (
+  // large 1
+  lg-1:
+    (
+      desktop: 14.5rem,
+      tablet: 10rem,
+      mobile: 7.5rem,
+    ),
+  // medium 1
+  md-1:
+    (
+      desktop: 10rem,
+      tablet: 7.5rem,
+      mobile: 5rem,
+    ),
+  // medium 2
+  md-2:
+    (
+      desktop: 7.5rem,
+      tablet: 6rem,
+      mobile: 5rem,
+    ),
+  // medium 3
+  md-3:
+    (
+      desktop: 6rem,
+      tablet: 5rem,
+      mobile: 5rem,
+    ),
+  // medium 4
+  md-4:
+    (
+      desktop: 5rem,
+      tablet: 3.5rem,
+      mobile: 3.5rem,
+    ),
+  // small 1
+  sm-1:
+    (
+      desktop: 4rem,
+      tablet: 4rem,
+      mobile: 3rem,
+    ),
+  // small 2
+  sm-2:
+    (
+      desktop: 3.5rem,
+      tablet: 3.5rem,
+      mobile: 3.5rem,
+    ),
+  // small 3
+  sm-3:
+    (
+      desktop: 3rem,
+      tablet: 3rem,
+      mobile: 3rem,
+    ),
+  // small 4
+  sm-4:
+    (
+      desktop: 2.5rem,
+      tablet: 2.5rem,
+      mobile: 2.5rem,
+    ),
+  // small 5
+  sm-5:
+    (
+      desktop: 2rem,
+      tablet: 2rem,
+      mobile: 2rem,
+    ),
+  // small 6
+  sm-6:
+    (
+      desktop: 1.5rem,
+      tablet: 2rem,
+      mobile: 2rem,
+    )
+);
+
+$design-dev-vertical-space-diff: (
+  desktop: 0rem,
+  tablet: 0rem,
+  mobile: 0rem
+);

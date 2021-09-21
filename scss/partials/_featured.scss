@@ -8,13 +8,7 @@
 ------------------------------------------------------------*/
 .featured {
   &__title {
-    margin-bottom: 5rem;
-    @include breakpoint(tablet) {
-      margin-bottom: 6rem;
-    }
-    @include breakpoint(desktop) {
-      margin-bottom: 7.5rem;
-    }
+    @include vertical-spacing(md-2, bottom, margin);
   }
 
   .content-block {

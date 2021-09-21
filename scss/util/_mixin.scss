@@ -83,3 +83,38 @@
     }
   }
 }
+
+/** 5 - Vertical spacing
+------------------------------------------------------------*/
+// Requires $design-vertical-spacing map as defined in _variables.scss
+@mixin vertical-spacing($spacer, $dir: auto, $type: margin) {
+  @if ($spacer == null) {
+    @warn 'this mixin needs a map passed in as an argument';
+  } @else {
+    // vertical spacing on interior panels for mobile & wide
+    $map: map-get($design-vertical-spacing, $spacer);
+    @each $breakpoint, $value in $map {
+      $diff: map-get($design-dev-vertical-space-diff, $breakpoint);
+
+      @if ($dir == auto) {
+        @if $breakpoint != small {
+          @include breakpoint($breakpoint) {
+            #{$type}-top: $value - $diff;
+            #{$type}-bottom: $value - $diff;
+          }
+        } @else {
+          #{$type}-top: $value - $diff;
+          #{$type}-bottom: $value - $diff;
+        }
+      } @else {
+        @if $breakpoint != small {
+          @include breakpoint($breakpoint) {
+            #{$type}-#{$dir}: $value - $diff;
+          }
+        } @else {
+          #{$type}-#{$dir}: $value - $diff;
+        }
+      }
+    }
+  }
+}
