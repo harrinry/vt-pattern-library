@@ -1,11 +1,3 @@
-/** TABLE OF CONTENTS - Cards
- — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
-1 — Content Block
-
-/// END TABLE OF CONTENTS **/
-
-/** 1 - Featured Content
-------------------------------------------------------------*/
 .featured {
   &__title {
     @include vertical-spacing(md-2, bottom, margin);
@@ -25,8 +17,9 @@
     }
 
     &__date {
-        background-color: $primary-blue;
+      background-color: $primary-blue;
     }
+
     @include breakpoint(desktop) {
       &--featured {
         @include grid();
