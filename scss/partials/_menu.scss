@@ -2,6 +2,9 @@
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Top Nav Wrapper
 2 — Mobile Hamburger Menu
+3 — Top Menu
+4 — Nav bar wrapper
+5 — Dropdown menus
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Top Nav Wrapper
@@ -104,6 +107,8 @@
   }
 }
 
+/** 3 - Top Menu
+------------------------------------------------------------*/
 .top-menu {
   align-items: center;
   padding: 2rem;
@@ -287,6 +292,8 @@
   }
 }
 
+/** 4 - Nav bar wrapper
+------------------------------------------------------------*/
 .navbar {
   position: absolute;
   top: 6.5rem;
@@ -369,6 +376,8 @@
   }
 }
 
+/** 5 - Dropdown menus
+------------------------------------------------------------*/
 .dropdown-menu {
   z-index: 10;
   left: 0;
@@ -423,16 +432,5 @@
     text-decoration: none;
     margin-top: 2rem;
     width: fit-content;
-  }
-}
-
-@keyframes sweep {
-  0% {
-    opacity: 0;
-    margin-left: -10px;
-  }
-  100% {
-    opacity: 1;
-    margin-left: 0px;
   }
 }
