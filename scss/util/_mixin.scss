@@ -1,3 +1,16 @@
+/** TABLE OF CONTENTS
+ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
+1 — Breakpoint
+2 — Theme
+3 - BEM utiliy
+  3.1 — Concatenate Modifier
+  3.2 — Self
+4 - Grid
+5 - Vertical spacing
+/// END TABLE OF CONTENTS **/
+
+/** 1 - Breakpoint
+------------------------------------------------------------*/
 @mixin breakpoint($breakpoint) {
   // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
@@ -14,6 +27,8 @@
   }
 }
 
+/** 2 - Theme
+------------------------------------------------------------*/
 @function get-theme-value($key) {
   @return map-get($exposed-theme-declarations, $key);
 }
@@ -35,8 +50,9 @@
   }
 }
 
+/** 3 - BEM utiliy
+------------------------------------------------------------*/
 // REF: https://www.viget.com/articles/bem-multiple-modifiers-and-experimenting-with-attribute-selectors/
- /* Concatenate Modifier */
 @mixin mod($parent, $modifier) {
   [class^="#{$parent}"][class*="-#{$modifier}"] {
     @content;
@@ -46,8 +62,24 @@
  /* Apply common style to all modifier of a block element */
 @mixin self() {
   $self: str-slice(#{&}, 2);
-  
-  @at-root &, [class*="#{$self}"] {
-    @content
+
+  @at-root &,
+    [class*="#{$self}"] {
+    @content;
+  }
+}
+
+/** 4 - Grid
+------------------------------------------------------------*/
+@mixin grid() {
+  @at-root & {
+    display: grid;
+    column-gap: $grid-mobile-gap;
+    @include breakpoint(tablet) {
+      column-gap: $grid-tablet-gap;
+    }
+    @include breakpoint(desktop) {
+      column-gap: $grid-desktop-gap;
+    }
   }
 }
