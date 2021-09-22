@@ -108,3 +108,8 @@ tmp/
 
 # System files
 .DS_Store
+
+# Project directories
+scss/dist/
+public/js/
+public/css/dist/

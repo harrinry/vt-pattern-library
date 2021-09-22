@@ -97,10 +97,12 @@
   }
 
   &__a {
-    width: 100%;
+    background: none;
     height: 100%;
-    position: absolute;
     left: 0;
+    position: absolute;
+    text-decoration: none;
+    width: 100%;
   }
 
   a {
