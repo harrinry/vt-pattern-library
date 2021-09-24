@@ -8,13 +8,13 @@
 @import 'util/variables';
 @import 'util/fonts';
 @import 'util/mixin';
-@import 'util/animations';
 // Zero everything out, just in case
 @import 'modern-css-reset';
 
 // Start loading theme files, starting with 'base'
 @import 'partials/utility';
 @import 'partials/base';
+@import 'partials/blog';
 @import 'partials/button';
 @import 'partials/cards';
 @import 'partials/featured';

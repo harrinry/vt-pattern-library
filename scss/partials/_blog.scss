@@ -1,0 +1,41 @@
+.grid-col-content {
+    margin-bottom: 7.5rem;
+
+    @include breakpoint(desktop) {
+        &__two {
+            @include grid();
+            align-items: center;
+            column-gap: 16.0rem !important;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 14.4rem;
+
+            &.featured {
+                column-gap: 14.5rem !important;
+            }
+        }
+
+        &__three {
+            @include grid();
+            align-items: center;
+            column-gap: 14.6rem !important;
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 13.5rem;
+
+            @include breakpoint(tablet) {
+                grid-column-gap: 7.1rem;
+            }
+        }
+    }
+
+    @include breakpoint(tablet) {
+        grid-column-gap: 7.1rem;
+    }
+
+}
+
+.blog-content {
+    margin-bottom: 7.5rem;
+    &--flip {
+        order: -1;
+    }
+}
