@@ -86,3 +86,46 @@
   }
 }
 
+/** 4 - Blog Grid
+------------------------------------------------------------*/
+.grid-col-content {
+  &__two, &__three {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  @include breakpoint(desktop) {
+      &__two {
+          @include grid();
+          align-items: center;
+          column-gap: 16.0rem !important;
+          grid-template-columns: repeat(2, 1fr);
+          padding-bottom: 13.5rem;
+          // padding-top: 3.75rem;
+          // padding-bottom: 3.75rem;
+          &.featured {
+              column-gap: 14.5rem !important;
+          }
+      }
+
+      &__three {
+          @include grid();
+          align-items: center;
+          column-gap: 14.6rem !important;
+          grid-template-columns: repeat(3, 1fr);
+          padding-bottom: 13.5rem;
+          // padding-top: 3.75rem;
+          // padding-bottom: 3.75rem;
+
+          @include breakpoint(tablet) {
+              grid-column-gap: 7.1rem;
+          }
+      }
+  }
+
+  @include breakpoint(tablet) {
+      grid-column-gap: 7.1rem;
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+}

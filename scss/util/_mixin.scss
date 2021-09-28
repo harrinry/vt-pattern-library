@@ -120,3 +120,14 @@
     }
   }
 }
+
+/** 6 - Image Zoom
+------------------------------------------------------------*/
+@mixin image-zoom() {
+  @at-root & {
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}

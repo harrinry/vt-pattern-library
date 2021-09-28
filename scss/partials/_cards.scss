@@ -66,11 +66,14 @@
     }
   }
 
-  &__text {
+  //blog-text-blog
+  &__blog {
     margin-bottom: 2.4rem;
-    &-blog {
+
+    &-text {
       color: $cool-neutral-1;
       font-size: 2.0rem;
+
       &-tag {
         color: $secondary-green-1;
         font-size: 1.6rem;
@@ -80,6 +83,7 @@
 
   &__title {
     margin-bottom: 1rem;
+
     @include breakpoint(tablet) {
       margin-bottom: 1.4rem;
     }
@@ -89,6 +93,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 2.4rem;
+
+    &-blog {
+      margin-bottom: 2.1rem;
+
+      .post-image {
+        display: inline-block;
+        overflow: hidden;
+      }
+    }
   }
 }
 
@@ -100,6 +113,7 @@
 
   .content-block__title {
     display: inline;
+
     &::after {
       @extend .content-block__title;
       content: "";
@@ -111,10 +125,43 @@
     .content-block__title {
       @extend .a;
     }
-    img {
-      outline: none;
-      opacity: 0.95;
-      transform: scale(1.01) perspective(0) translateZ(0);
+  }
+
+  .content-block__image {
+    @include image-zoom;
+  }
+}
+
+/** 3 - Blog Cards - Clickable
+------------------------------------------------------------*/
+.content-block--blog {
+  padding-bottom: 7.5rem;
+  @include breakpoint(desktop) {
+    padding-bottom: 0;
+  }
+
+  &-featured {
+    padding-bottom: 7.5rem;
+    padding-top: 7.5rem;
+    @extend .content-block--clickable;
+
+    @include breakpoint(desktop) {
+      @include grid();
+      align-items: center;
+      column-gap: 14.5rem !important;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 14.5rem;
+      padding-top: 14.5rem;
     }
+
+  }
+
+  &-flip {
+    order: -1;
+    padding-bottom: 7.5rem;
+  }
+
+  &__lower {
+    margin-top: 2.1rem;
   }
 }
