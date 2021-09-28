@@ -91,7 +91,15 @@
 .grid-col-content {
   &__two, &__three {
     padding-top: 0;
-    padding-bottom: 0;
+  }
+
+  &__two {
+    &:nth-of-type(3){
+      padding-bottom: 7.5rem;
+      @include breakpoint(desktop) {
+        padding-bottom: 14.4rem;
+      }
+    }
   }
 
   &__three {
