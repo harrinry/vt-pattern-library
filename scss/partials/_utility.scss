@@ -93,6 +93,15 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+
+  &__three {
+    &:nth-of-type(3n+1){
+      padding-top: 7.5rem;
+      @include breakpoint(desktop) {
+      padding-top: 14.4rem;
+      }
+    } 
+  }
   
   @include breakpoint(desktop) {
       &__two {
@@ -116,10 +125,6 @@
           padding-bottom: 13.5rem;
           // padding-top: 3.75rem;
           // padding-bottom: 3.75rem;
-
-          @include breakpoint(tablet) {
-              grid-column-gap: 7.1rem;
-          }
       }
   }
 
