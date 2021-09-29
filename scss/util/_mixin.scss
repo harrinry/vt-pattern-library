@@ -7,7 +7,8 @@
   3.2 — Self
 4 - Grid
 5 - Vertical spacing
-6 - Clear decoration
+6 - Image zoom
+7 - Clear decoration
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Breakpoint
@@ -145,6 +146,19 @@
   }
 }
 
+/** 6 - Image zoom
+------------------------------------------------------------*/
+@mixin image-zoom() {
+  @at-root & {
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+/** 7 - Clear decoration
+------------------------------------------------------------*/
 @mixin clear-decoration() {
   & {
     background: none;
