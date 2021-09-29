@@ -2,6 +2,7 @@
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Content Block
 2 - Content Block - Clickable
+3 - Content Block - Clickable - Blog Cards
 
 /// END TABLE OF CONTENTS **/
 
@@ -35,6 +36,7 @@
     justify-content: center;
     margin-left: -1rem;
     width: 9rem;
+    z-index: 1;
 
     @include breakpoint(tablet) {
       margin-left: -2rem;
@@ -65,12 +67,23 @@
     }
   }
 
-  &__text {
+  &__blog {
     margin-bottom: 2.4rem;
+
+    &-text {
+      color: $cool-neutral-1;
+      font-size: 2.0rem;
+
+      &-tag {
+        color: $secondary-green-1;
+        font-size: 1.6rem;
+      }
+    }
   }
 
   &__title {
     margin-bottom: 1rem;
+
     @include breakpoint(tablet) {
       margin-bottom: 1.4rem;
     }
@@ -80,6 +93,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 2.4rem;
+
+    &-blog {
+      margin-bottom: 2.1rem;
+
+      .post-image {
+        display: inline-block;
+        overflow: hidden;
+      }
+    }
   }
 }
 
@@ -91,6 +113,7 @@
 
   .content-block__title {
     display: inline;
+
     &::after {
       @extend .content-block__title;
       content: "";
@@ -102,5 +125,45 @@
     .content-block__title {
       @extend .a;
     }
+  }
+
+  .content-block__image {
+    @include image-zoom;
+  }
+}
+
+/** 3 - Content Block - Clickable - Blog Cards
+------------------------------------------------------------*/
+.content-block--blog {
+  padding-bottom: 7.5rem;
+  &:last-child {
+    padding-bottom: 0;
+  }
+  @include breakpoint(desktop) {
+    padding-bottom: 0;
+  }
+
+  &-featured {
+    padding-bottom: 7.5rem;
+    padding-top: 7.5rem;
+    @extend .content-block--clickable;
+
+    @include breakpoint(desktop) {
+      @include grid();
+      align-items: center;
+      column-gap: 14.5rem !important;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 14.5rem;
+      padding-top: 14.5rem;
+    }
+
+  }
+
+  &-flip {
+    order: -1;
+  }
+
+  &__lower {
+    margin-top: 2.1rem;
   }
 }

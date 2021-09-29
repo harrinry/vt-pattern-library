@@ -7,6 +7,7 @@
   3.2 — Self
 4 - Grid
 5 - Vertical spacing
+6 - Image zoom
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Breakpoint
@@ -117,6 +118,17 @@
           #{$type}-#{$dir}: $value - $diff;
         }
       }
+    }
+  }
+}
+
+/** 6 - Image zoom
+------------------------------------------------------------*/
+@mixin image-zoom() {
+  @at-root & {
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.02);
     }
   }
 }
