@@ -2,6 +2,7 @@
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Content Block
 2 - Content Block - Clickable
+3 - Content Block - Clickable - Blog Cards
 
 /// END TABLE OF CONTENTS **/
 
@@ -132,10 +133,13 @@
   }
 }
 
-/** 3 - Blog Cards - Clickable
+/** 3 - Content Block - Clickable - Blog Cards
 ------------------------------------------------------------*/
 .content-block--blog {
   padding-bottom: 7.5rem;
+  &:last-child {
+    padding-bottom: 0;
+  }
   @include breakpoint(desktop) {
     padding-bottom: 0;
   }

@@ -3,6 +3,7 @@
 1 — Text
 2 — Containers
 3 - Accessibility and Visibility
+4 - Multi Column Blog Grid
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Text
@@ -86,7 +87,7 @@
   }
 }
 
-/** 4 - Blog Grid
+/** 4 - Multi Column Blog Grid
 ------------------------------------------------------------*/
 .grid-col-content {
   &__two, &__three {
@@ -118,8 +119,6 @@
           column-gap: 16.0rem !important;
           grid-template-columns: repeat(2, 1fr);
           padding-bottom: 13.5rem;
-          // padding-top: 3.75rem;
-          // padding-bottom: 3.75rem;
           &.featured {
               column-gap: 14.5rem !important;
           }
@@ -131,8 +130,6 @@
           column-gap: 14.6rem !important;
           grid-template-columns: repeat(3, 1fr);
           padding-bottom: 13.5rem;
-          // padding-top: 3.75rem;
-          // padding-bottom: 3.75rem;
       }
   }
 
