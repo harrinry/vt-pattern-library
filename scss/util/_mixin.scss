@@ -8,6 +8,7 @@
 4 - Grid
 5 - Vertical spacing
 6 - Image zoom
+7 - Clear decoration
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Breakpoint
@@ -18,6 +19,28 @@
     // Prints a media query based on the value
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin only-breakpoint($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // between tablet and desktop breakpoint
+    @if ($breakpoint == tablet) {
+      @media (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, desktop) - 1px) {
+        @content;
+      }
+    } @else {
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
     }
   }
 
@@ -90,6 +113,7 @@
 /** 5 - Vertical spacing
 ------------------------------------------------------------*/
 // Requires $design-vertical-spacing map as defined in _variables.scss
+// E.g. vertical-spacing(lg-1 | md-1 | ..., auto | top | bottom, margin | padding)
 @mixin vertical-spacing($spacer, $dir: auto, $type: margin) {
   @if ($spacer == null) {
     @warn 'this mixin needs a map passed in as an argument';
@@ -100,8 +124,8 @@
       $diff: map-get($design-dev-vertical-space-diff, $breakpoint);
 
       @if ($dir == auto) {
-        @if $breakpoint != small {
-          @include breakpoint($breakpoint) {
+        @if $breakpoint != mobile {
+          @include only-breakpoint($breakpoint) {
             #{$type}-top: $value - $diff;
             #{$type}-bottom: $value - $diff;
           }
@@ -110,8 +134,8 @@
           #{$type}-bottom: $value - $diff;
         }
       } @else {
-        @if $breakpoint != small {
-          @include breakpoint($breakpoint) {
+        @if $breakpoint != mobile {
+          @include only-breakpoint($breakpoint) {
             #{$type}-#{$dir}: $value - $diff;
           }
         } @else {
@@ -130,5 +154,15 @@
     &:hover {
       transform: scale(1.02);
     }
+  }
+}
+
+/** 7 - Clear decoration
+------------------------------------------------------------*/
+@mixin clear-decoration() {
+  & {
+    background: none;
+    text-decoration: none;
+    border: none;
   }
 }
