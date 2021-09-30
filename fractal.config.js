@@ -76,7 +76,7 @@ fractal.components.set('statuses', {
   wip: {
     label: "WIP",
     description: "Work in progress. Implement with caution.",
-    color: "#ff9233"
+    color: "#2a14c3"
   },
   review: {
     label: "In Review",
