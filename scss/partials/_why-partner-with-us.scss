@@ -1,0 +1,26 @@
+.why-partner-with-us {
+  @include grid();
+  grid-template-columns: 1fr;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: 17.5rem auto 21rem;
+  }
+
+  & .content-block {
+    @include vertical-spacing(md-3, bottom, margin);
+
+    @include breakpoint(tablet) {
+      grid-column: 2;
+    }
+  }
+
+  &__heading {
+    @extend h1;
+    color: $primary-blue;
+    @include vertical-spacing(lg-1, bottom, margin);
+
+    @include breakpoint(tablet) {
+      grid-column: 1 / 3;
+    }
+  }
+}
