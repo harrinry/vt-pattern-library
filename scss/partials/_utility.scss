@@ -95,6 +95,10 @@
   }
 
   &__two {
+    &--homepage {
+      @extend .grid-col-content__two;
+      column-gap: 16.0rem !important;
+    }
     &:nth-of-type(3){
       padding-bottom: 7.5rem;
       @include breakpoint(desktop) {
@@ -111,16 +115,33 @@
       }
     } 
   }
+
+  &__four {
+    &--blog-home {
+      @extend .grid-col-content__four;
+      gap: 2rem !important;
+      padding-top: 5.0rem;
+      @include breakpoint(desktop) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  
   
   @include breakpoint(desktop) {
       &__two {
           @include grid();
-          align-items: center;
+          align-items: top;
           column-gap: 16.0rem !important;
           grid-template-columns: repeat(2, 1fr);
           padding-bottom: 13.5rem;
           &.featured {
               column-gap: 14.5rem !important;
+          }
+          &--homepage {
+            align-items: top !important;
+            column-gap: 6rem !important;
           }
       }
 
@@ -131,7 +152,27 @@
           grid-template-columns: repeat(3, 1fr);
           padding-bottom: 13.5rem;
       }
+      &__four {
+          @include grid();
+          display: grid !important;
+          align-items: top;
+          column-gap: 5.8rem !important;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: repeat(2, minmax(150px, 2fr));
+          padding-bottom: 13.5rem;
+          overflow-x: inherit !important;
+          scroll-behavior: none;
+      }
   }
+
+  &__four {
+    @include breakpoint(desktop) {
+      .content-slider__block, .content-block--blog {
+        width: 24rem !important;
+      }
+    }
+  }
+  
 
   @include breakpoint(tablet) {
       grid-column-gap: 7.1rem;
