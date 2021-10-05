@@ -34,11 +34,9 @@
 
     .headline {
       @extend .uppercase;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 70%,
-        get-theme-value(secondary-accent) 70%
-      );
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 0) 70%,
+          get-theme-value(secondary-accent) 70%);
       display: inline;
     }
   }
@@ -52,6 +50,7 @@
 
 .hidden-for-desktop {
   display: relative;
+
   @include breakpoint(desktop) {
     display: none;
   }
@@ -90,7 +89,9 @@
 /** 4 - Multi Column Blog Grid
 ------------------------------------------------------------*/
 .grid-col-content {
-  &__two, &__three {
+
+  &__two,
+  &__three {
     padding-top: 0;
   }
 
@@ -99,8 +100,10 @@
       @extend .grid-col-content__two;
       column-gap: 16.0rem !important;
     }
-    &:nth-of-type(3){
+
+    &:nth-of-type(3) {
       padding-bottom: 7.5rem;
+
       @include breakpoint(desktop) {
         padding-bottom: 14.4rem;
       }
@@ -108,12 +111,13 @@
   }
 
   &__three {
-    &:nth-of-type(3n+1){
+    &:nth-of-type(3n+1) {
       padding-top: 7.5rem;
+
       @include breakpoint(desktop) {
-      padding-top: 14.4rem;
+        padding-top: 14.4rem;
       }
-    } 
+    }
   }
 
   &__four {
@@ -121,56 +125,60 @@
       @extend .grid-col-content__four;
       gap: 2rem !important;
       padding-top: 5.0rem;
+
       @include breakpoint(desktop) {
         padding-top: 0;
       }
     }
   }
 
-  
-  
-  @include breakpoint(desktop) {
-      &__two {
-          @include grid();
-          align-items: center;
-          column-gap: 16.0rem !important;
-          grid-template-columns: repeat(2, 1fr);
-          padding-bottom: 13.5rem;
-          &.featured {
-              column-gap: 14.5rem !important;
-          }
-      }
 
-      &__three {
-          @include grid();
-          align-items: center;
-          column-gap: 14.6rem !important;
-          grid-template-columns: repeat(3, 1fr);
-          padding-bottom: 13.5rem;
+
+  @include breakpoint(desktop) {
+    &__two {
+      @include grid();
+      align-items: center;
+      column-gap: 16.0rem !important;
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 13.5rem;
+
+      &.featured {
+        column-gap: 14.5rem !important;
       }
-      &__four {
-          @include grid();
-          display: grid !important;
-          align-items: top;
-          column-gap: 5.8rem !important;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 2fr;
-          margin-left: 0 !important;
-          padding-left: 0 !important;
-          padding-bottom: 13.5rem;
-          overflow-x: inherit !important;
-          scroll-behavior: none;
-          &--homepage-blog {
-            padding-bottom: 6.0rem;
-            margin-left: 0 !important;
-            padding-left: 0 !important;
-          }
+    }
+
+    &__three {
+      @include grid();
+      align-items: center;
+      column-gap: 14.6rem !important;
+      grid-template-columns: repeat(3, 1fr);
+      padding-bottom: 13.5rem;
+    }
+
+    &__four {
+      @include grid();
+      display: grid !important;
+      align-items: top;
+      column-gap: 5.8rem !important;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+      padding-bottom: 13.5rem;
+      overflow-x: inherit !important;
+      scroll-behavior: none;
+
+      &--homepage-blog {
+        padding-bottom: 6.0rem;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
       }
-  }  
+    }
+  }
 
   @include breakpoint(tablet) {
-      grid-column-gap: 7.1rem;
-      grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 7.1rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 
 }

@@ -104,12 +104,16 @@
       }
     }
   }
+
   &__blog-author-date {
     padding-bottom: 1rem;
     padding-top: 1rem;
-    time, label {
+
+    time,
+    label {
       @extend .tk-degular-text;
     }
+
     time {
       font-weight: 500;
     }
@@ -147,9 +151,11 @@
 ------------------------------------------------------------*/
 .content-block--blog {
   padding-bottom: 7.5rem;
+
   &:last-child {
     padding-bottom: 0;
   }
+
   @include breakpoint(desktop) {
     padding-bottom: 0;
   }
@@ -177,9 +183,11 @@
   &__lower {
     margin-top: 2.1rem;
   }
+
   &-featured-home {
     padding-bottom: 5.0rem;
     border-bottom: 1px solid $cool-neutral-6;
+
     @include breakpoint(desktop) {
       border-bottom: none;
       padding-bottom: 0;
@@ -198,21 +206,26 @@
     padding-bottom: 14.5rem;
     padding-top: 14.5rem;
   }
-  .content-slider__block, .content-block--blog {
+
+  .content-slider__block,
+  .content-block--blog {
     @include breakpoint(desktop) {
       width: 24rem !important;
     }
+
     width: 27.8rem !important;
   }
 
-  .grid-col-content__four--homepage-blog {    
+  .grid-col-content__four--homepage-blog {
     margin-left: 0;
     padding-left: 0;
     grid-row-gap: 10rem !important;
-    @media only screen and (min-width: 866px) and (max-width: 1160px){  // TODO discuss with Mark and the Web team about how to handle custom breakpoints
+
+    @media only screen and (min-width: 866px) and (max-width: 1160px) {
+      // TODO discuss with Mark and the Web team about how to handle custom breakpoints
       grid-row-gap: 6.2rem !important;
       grid-template-columns: 1fr;
     }
   }
-  
+
 }
