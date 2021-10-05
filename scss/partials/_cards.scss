@@ -3,6 +3,7 @@
 1 — Content Block
 2 - Content Block - Clickable
 3 - Content Block - Clickable - Blog Cards
+4 - Content Block - Clickable - Homepage Blog Card Grid
 
 /// END TABLE OF CONTENTS **/
 
@@ -186,6 +187,8 @@
   }
 }
 
+/** 4 - Content Block - Clickable - Homepage Blog Card Grid
+------------------------------------------------------------*/
 .content-block--homepage-blog {
   @include breakpoint(desktop) {
     @include grid();
@@ -194,6 +197,22 @@
     grid-template-columns: 1fr 1fr;
     padding-bottom: 14.5rem;
     padding-top: 14.5rem;
+  }
+  .content-slider__block, .content-block--blog {
+    @include breakpoint(desktop) {
+      width: 24rem !important;
+    }
+    width: 27.8rem !important;
+  }
+
+  .grid-col-content__four--homepage-blog {    
+    margin-left: 0;
+    padding-left: 0;
+    grid-row-gap: 10rem !important;
+    @media only screen and (min-width: 866px) and (max-width: 1160px){  // TODO discuss with Mark and the Web team about how to handle custom breakpoints
+      grid-row-gap: 6.2rem !important;
+      grid-template-columns: 1fr;
+    }
   }
   
 }

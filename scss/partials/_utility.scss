@@ -159,22 +159,14 @@
           padding-left: 0 !important;
           padding-bottom: 13.5rem;
           overflow-x: inherit !important;
-          grid-row-gap: 12.4rem !important;
           scroll-behavior: none;
+          &--homepage-blog {
+            padding-bottom: 6.0rem;
+            margin-left: 0 !important;
+            padding-left: 0 !important;
+          }
       }
-  }
-
-  &__four {
-    @include breakpoint(desktop) {
-      .content-slider__block, .content-block--blog {
-        width: 24rem !important;
-      }
-    }
-    &--homepage-blog {
-      padding-bottom: 6.0rem;
-    }
-  }
-  
+  }  
 
   @include breakpoint(tablet) {
       grid-column-gap: 7.1rem;
