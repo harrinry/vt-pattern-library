@@ -103,6 +103,16 @@
       }
     }
   }
+  &__blog-author-date {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    time, label {
+      @extend .tk-degular-text;
+    }
+    time {
+      font-weight: 500;
+    }
+  }
 }
 
 /** 2 - Content Block - Clickable
@@ -174,4 +184,16 @@
       padding-bottom: 0;
     }
   }
+}
+
+.content-block--homepage-blog {
+  @include breakpoint(desktop) {
+    @include grid();
+    align-items: top;
+    column-gap: 6rem !important;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 14.5rem;
+    padding-top: 14.5rem;
+  }
+  
 }

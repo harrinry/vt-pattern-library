@@ -117,7 +117,7 @@
   }
 
   &__four {
-    &--blog-home {
+    &--homepage-blog {
       @extend .grid-col-content__four;
       gap: 2rem !important;
       padding-top: 5.0rem;
@@ -132,16 +132,12 @@
   @include breakpoint(desktop) {
       &__two {
           @include grid();
-          align-items: top;
+          align-items: center;
           column-gap: 16.0rem !important;
           grid-template-columns: repeat(2, 1fr);
           padding-bottom: 13.5rem;
           &.featured {
               column-gap: 14.5rem !important;
-          }
-          &--homepage {
-            align-items: top !important;
-            column-gap: 6rem !important;
           }
       }
 
@@ -158,9 +154,12 @@
           align-items: top;
           column-gap: 5.8rem !important;
           grid-template-columns: 1fr 1fr;
-          grid-template-rows: repeat(2, minmax(150px, 2fr));
+          grid-template-rows: 2fr;
+          margin-left: 0 !important;
+          padding-left: 0 !important;
           padding-bottom: 13.5rem;
           overflow-x: inherit !important;
+          grid-row-gap: 12.4rem !important;
           scroll-behavior: none;
       }
   }
@@ -170,9 +169,8 @@
       .content-slider__block, .content-block--blog {
         width: 24rem !important;
       }
-      width: 27.8rem !important;
     }
-    &--blog-home {
+    &--homepage-blog {
       padding-bottom: 6.0rem;
     }
   }
