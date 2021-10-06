@@ -73,13 +73,17 @@
 
     &-text {
       color: $cool-neutral-1;
-      font-size: 2.0rem;
+      font-size: 2rem;
 
       &-tag {
         color: $secondary-green-1;
         font-size: 1.6rem;
       }
     }
+  }
+
+  &__text {
+    margin-bottom: 2.4rem;
   }
 
   &__title {
@@ -173,7 +177,6 @@
       padding-bottom: 14.5rem;
       padding-top: 14.5rem;
     }
-
   }
 
   &-flip {
