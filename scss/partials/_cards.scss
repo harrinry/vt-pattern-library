@@ -207,6 +207,10 @@
     padding-top: 14.5rem;
   }
 
+  .content-block__title {
+    @extend .h4;
+  }
+
   .content-slider__block,
   .content-block--blog {
     @include breakpoint(desktop) {
@@ -220,6 +224,10 @@
     margin-left: 0;
     padding-left: 0;
     grid-row-gap: 10rem !important;
+
+    .content-block__title {
+      @extend .h6;
+    }
 
     @media only screen and (min-width: 866px) and (max-width: 1160px) {
       // TODO discuss with Mark and the Web team about how to handle custom breakpoints
