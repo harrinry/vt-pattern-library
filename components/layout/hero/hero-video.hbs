@@ -12,10 +12,7 @@
         class="hero-video__controller"
         type="checkbox"
       />
-      <label
-        for="hero-video__controller"
-        class="hero-video__controller-wrapper"
-      >
+      <div for="hero-video__controller" class="hero-video__controller-wrapper">
         <video
           class="hero-video__video"
           autoplay="true"
@@ -23,11 +20,11 @@
           muted="true"
           loop="true"
         >
-          <source src="{{path '/video/hero-homepage.mp4'}}" type="video/mp4" />
+          <source src="{{path "/video/hero-homepage.mp4"}}" type="video/mp4" />
           Your browser does not support the video tag.
         </video><!-- .hero-video__video -->
         <a class="hero-video__controller-button" href="#"></a>
-      </label>
+      </div><!-- hero-video__controller-wrapper -->
 
     </div><!-- .hero-video__media -->
   </section>

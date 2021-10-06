@@ -1,29 +1,25 @@
 /**
- * Class representing the main menu navigation.
+ * Class representing the video player controller.
  */
 export default class VideoController {
-  constructor(classEl) {
-    let videoWrapper = document.querySelector(
-      "." + classEl + "__controller-wrapper"
-    );
+  constructor(wrapperSelector, controllerSelector) {
+    this.wrapper = document.querySelector(wrapperSelector);
+    this.controller = document.querySelector(controllerSelector);
+    this.video = this.wrapper.getElementsByTagName("video")[0];
 
-    if (videoWrapper) {
-      let video = videoWrapper.getElementsByTagName("video")[0];
+    this.#controlState();
+  }
 
-      // control video state on wrapper click
-      videoWrapper.addEventListener("click", () => {
-        if (video.paused) video.play();
-        else video.pause();
-      });
-
-      // // Close open menus if the esc key is pressed
-      // document.addEventListener("keydown", (e) => {
-      //   if (e.key == "Escape")
-      //     menus.forEach((thisDetail) => {
-      //       if (thisDetail.open) thisDetail.removeAttribute("open");
-      //     });
-      //   return;
-      // });
-    }
+  // control video state on wrapper click
+  #controlState() {
+    this.wrapper.addEventListener("click", () => {
+      if (this.video.paused) {
+        this.controller.checked = true;
+        this.video.play();
+      } else {
+        this.controller.checked = false;
+        this.video.pause();
+      }
+    });
   }
 }
