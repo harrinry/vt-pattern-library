@@ -29,6 +29,10 @@
 .success-story {
   $storyBlock: &;
 
+  &:not(:first-child) {
+    margin-top: 13rem;
+  }
+
   &__container {
     @include self() {
       @include grid();
@@ -112,9 +116,12 @@
 
   &__logo {
     margin-bottom: 1rem;
+    max-height: 12rem;
+    max-width: 12rem;
   }
 
   &__header {
+    @extend .h5;
     margin-bottom: 1.5rem;
   }
 
