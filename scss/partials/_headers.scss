@@ -1,6 +1,7 @@
 /** TABLE OF CONTENTS
  — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
 1 — Alternates
+2 — Section Heading
 /// END TABLE OF CONTENTS **/
 
 /** 1 - Alternates
@@ -19,5 +20,28 @@
   @include breakpoint(tablet) {
     font-size: 10rem;
     line-height: 1;
+
+  }
+}
+
+/** 2 - Section Heading
+------------------------------------------------------------*/
+.section-heading {
+  @extend h1;
+
+  @include vertical-spacing(md-1, bottom, margin);
+
+  &--underline {
+    @extend .h4;
+    @extend .uppercase;
+
+    @include vertical-spacing(md-1, bottom, margin);
+
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 70%,
+        get-theme-value(secondary-accent) 70%
+    );
+    display: inline-block;
   }
 }
