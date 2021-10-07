@@ -14,10 +14,10 @@ export default class VideoController {
   #controlState() {
     this.wrapper.addEventListener("click", () => {
       if (this.video.paused) {
-        this.controller.checked = true;
+        this.controller.checked = false;
         this.video.play();
       } else {
-        this.controller.checked = false;
+        this.controller.checked = true;
         this.video.pause();
       }
     });
