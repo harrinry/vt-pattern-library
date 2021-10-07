@@ -29,6 +29,10 @@
 .success-story {
   $storyBlock: &;
 
+  &:last-child {
+    margin-bottom: 10rem;
+  }
+
   &:not(:first-child) {
     margin-top: 13rem;
   }
