@@ -123,7 +123,6 @@
   &__four {
     &--homepage-blog {
       @extend .grid-col-content__four;
-      gap: 2rem !important;
       padding-top: 5.0rem;
 
       @include breakpoint(desktop) {
@@ -156,23 +155,9 @@
     }
 
     &__four {
-      @include grid();
-      display: grid !important;
       align-items: top;
-      column-gap: 5.8rem !important;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 2fr;
-      margin-left: 0 !important;
-      padding-left: 0 !important;
-      padding-bottom: 13.5rem;
-      overflow-x: inherit !important;
-      scroll-behavior: none;
-
-      &--homepage-blog {
-        padding-bottom: 6.0rem;
-        margin-left: 0 !important;
-        padding-left: 0 !important;
-      }
     }
   }
 

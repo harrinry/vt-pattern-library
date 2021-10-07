@@ -201,12 +201,13 @@
 /** 4 - Content Block - Clickable - Homepage Blog Card Grid
 ------------------------------------------------------------*/
 .content-block--homepage-blog {
+  padding-bottom: 4.4rem;
+
   @include breakpoint(desktop) {
-    @include grid();
-    align-items: top;
-    column-gap: 6rem !important;
+    display: grid;
+    column-gap: 6rem;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 14.5rem;
+    padding-bottom: 10rem;
     padding-top: 14.5rem;
   }
 
@@ -217,16 +218,24 @@
   .content-slider__block,
   .content-block--blog {
     @include breakpoint(desktop) {
+      // Override width set by the content slider
       width: 24rem !important;
     }
 
+    // Override width set by the content slider
     width: 27.8rem !important;
   }
 
   .grid-col-content__four--homepage-blog {
+    @include breakpoint(desktop) {
+      column-gap: 5.8rem;
+      display: grid;
+      grid-row-gap: 10rem;
+    }
+
+    column-gap: 2rem;
     margin-left: 0;
     padding-left: 0;
-    grid-row-gap: 10rem !important;
 
     .content-block__title {
       @extend .h6;
@@ -234,10 +243,9 @@
 
     @media only screen and (min-width: 866px) and (max-width: 1160px) {
       // TODO discuss with Mark and the Web team about how to handle custom breakpoints
-      grid-row-gap: 6.2rem !important;
+      grid-row-gap: 6.2rem;
       grid-template-columns: 1fr;
-      margin-left: 5rem !important;
-      padding-left: 5rem !important;
+      place-items: center;
     }
   }
 
